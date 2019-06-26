@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拖拽</title>
+</head>
+<body>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            width:200px;
+            height:200px;
+            background:pink;
+            position:fixed;
+        }
+    </style>
+
+    <div class="box"></div>
+    
+    <script>
+        // 1. 获取操作元素
+        //保存开始时的横纵坐标
+        //保存鼠标移动时的 
+
+        //2. 给元素添加鼠标按下事件   // 3.事件触发时的一些信息保存在事件对象中（事件处理函数的第一个参数就是事件对象）
+        //4. 当鼠标按下是触发鼠标移动事件模拟拖动。给窗口添加鼠标移动事件，通过事件监听的方式
+        // 5.保存鼠标当前位于浏览器窗口的位置
+        //计算元素定位的数值
+        //6.判断边界距离，防止元素超出浏览器  水平方向的最大值，最小值    垂直方向的最大值，最小值
+        //7.添加鼠标抬起事件，清除mousemove事件，为了能够鼠标在屏幕的任意位置抬起都能够清除mousemove事件，需要添加给window
+
+        let box=document.querySelector(".box");
+        let startX,startY;
+        let endX,endY;
+        let lefts,tops;
+
+        function move(event){
+            endX=event.clientX;
+            endY=event.clientY;
+            lefts=endX-startX;
+            tops=endY-startY;
+            if(lefts<=0)
+                lefts=0;
+            if(lefts>=window.innerWidth-box.offsetWidth)
+                lefts=window.innerWidth-box.offsetWidth;
+            if(tops<=0)
+                tops=0;
+            if(tops>=window.innerHeight-box.offsetHeight)
+                tops=window.innerHeight-box.offsetHeight;
+            box.style.left=lefts+"px";
+            box.style.top=tops+"px";
+        }
+        box.onmousedown=(e)=>{
+            startX=e.clientX;
+            startY=e.clientY;
+            box.style.left=startX+"px";
+            box.style.top=startY+"px";
+            window.addEventListener("mousemove",move,false);
+        }
+        window.onmouseup=()=>{
+            window.removeEventListener("mousemove",move,false);
+        }
+
+        
+    
+    </script>
+</body>
+</html>

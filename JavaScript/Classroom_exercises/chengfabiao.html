@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>九九乘法表</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+    
+
+
+</style>
+<body>
+    
+</body>
+<script>
+    let table=document.createElement("table");
+    table.cellSpacing="0";
+    
+    for(let i=1;i<10;i++){
+        let tr=document.createElement("tr");
+        for(let j=1;j<=i;j++){
+            let td=document.createElement("td");
+            td.style.border="1px solid pink";
+            td.style.padding="5px";
+            let text=document.createTextNode(j+"×"+i+"="+j*i);
+            td.appendChild(text);
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+    }
+    document.body.appendChild(table);
+    
+</script>
+</html>

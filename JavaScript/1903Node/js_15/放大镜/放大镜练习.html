@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .imgbox {
+            width: 250px;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+            float: left;
+        }
+        
+        .imgbox img {
+            width: 100%;
+        }
+        
+        .small-box {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, .5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        
+        .big {
+            width: 250px;
+            height: 250px;
+            float: left;
+            overflow: hidden;
+            margin-left: 50px;
+            display: none;
+            position: relative;
+        }
+        
+        .big img {
+            width: 1250px;
+            position: absolute;
+        }
+        
+        .mask {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 放原来图片的大盒子 -->
+    <div class="imgbox">
+        <!--移动的滑块  -->
+        <div class="small-box"></div>
+        <!-- 放放大镜移动范围的图片 ondragstart="return false"防止图片被拖拽-->
+        <div class="mask"></div>
+        <img src="img/timg.jpg" alt="" ondragstart="return false">
+    </div>
+    <!-- 放大后图片的盒子 -->
+    <div class="big">
+        <img src="img/timg.jpg" alt="">
+    </div>
+</body>
+
+</html>
+<script>
+    window.onload = function() {
+        //获取操作的元素
+        let mask = document.querySelector(".mask");
+        //获取移动的滑块
+        let smallBox = document.querySelector(".small-box");
+        let moveX, moveY; //鼠标事件触发时，鼠标相对于时间源的位置
+        //获取放大图片的盒子
+        let big = document.querySelector(".big");
+        let bigimg = big.firstElementChild; //通过节点获取他的第一个字节字节点，也就是图片
+        console.log(bigimg);
+        let w; //小块宽度的一半
+        mask.onmouseover = function() { //当鼠标移入大盒子
+                smallBox.style.display = "block"; //当鼠标移入大盒子是小盒子显示
+                big.style.display = "block"; //鼠标移入大盒子放大图片的盒子显示
+                w = smallBox.offsetWidth / 2; //盒子显示以后，鼠标保持在盒子中间的位置
+                mask.addEventListener('mousemove', move, false); //在鼠标移入大盒子给大盒子添加事件监听，使滑块跟着鼠标移动
+            }
+            //封装事件处理函数 鼠标移动事件
+        function move(e) {
+            moveX = e.offsetX; //鼠标在mask盒子里移动时，鼠标距离mask盒子左边的距离
+            moveY = e.offsetY; //鼠标在mask盒子里移动时，鼠标距离mask盒子左边的距离
+            let x = moveX - w; //元素的left值=鼠标的位置-元素宽度的的一半，保证鼠标在滑块的中间
+            let y = moveY - w; //元素的top值为鼠标的位置-元素高度的一半
+            if (x >= mask.offsetWidth - smallBox.offsetWidth) {
+                x = mask.offsetWidth - smallBox.offsetWidth; //滑块不能移出盒子外的条件
+            }
+            if (x < 0) {
+                x = 0;
+            }
+            if (y >= mask.offsetHeight - smallBox.offsetHeight) {
+                y = mask.offsetHeight - smallBox.offsetHeight;
+            }
+            if (y < 0) {
+                y = 0;
+            }
+            smallBox.style.left = x + "px";
+            smallBox.style.top = y + "px";
+            bigimg.style.left = -x * 5 + 'px'; //放大的图片移动的方向和滑块移动的方向相反
+            bigimg.style.top = -y * 5 + "px"
+        }
+        mask.onmouseout = function() { //鼠标移出时隐藏滑块
+            smallBox.style.display = "none";
+            big.style.display = "none";
+            mask.removeEventListener("mousemove", move, false);
+        }
+    }
+</script>

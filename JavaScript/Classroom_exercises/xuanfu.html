@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.box{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    box-shadow:0 0 10px 0 rgba(0,0,0,0.3);
+    background:sandybrown;
+    position:fixed;
+}
+
+</style>
+<body>
+    <div class="box"></div>
+
+    <script>
+        // let box=document.querySelector(".box");
+        // let speedX=10;
+        // let speedY=10;
+        // let offsetL=box.offsetLeft;
+        // let offsetT=box.offsetTop;
+        // function move(){
+        //     offsetL+=speedX;
+        //     if(offsetL>=innerWidth-box.offsetWidth || offsetL<=0){
+        //         speedX=-speedX;
+        //     }
+        //     box.style.left=offsetL+"px";
+        //     offsetT+=speedY;
+        //     if(offsetT>=innerHeight-box.offsetHeight || offsetT<=0){
+        //         speedY=-speedY;
+        //     }
+        //     box.style.top=offsetT+"px";
+        // }
+        // let timer=setInterval(()=>{
+        //     move();
+        // },30)
+        // box.onmouseover=()=>{
+        //     clearInterval(timer);
+        // }
+        // box.onmouseout=()=>{
+            
+        //     timer=setInterval(move,30);
+        // }
+        // let boxBtn=document.querySelector("")
+
+        //将实现悬浮框的整个过程通过构造函数的方式进行封装，然后通过实例化这个构造函数来实现悬浮框
+        // 1.创建一个构造函数
+        // 2.构造函数接收实参
+        // 3.参数中包括选择器，时间，运动速度
+        // 4.在构造函数中通过this来添加属性和方法
+        // 5.实例化构造函数，实现悬浮框效果
+        function Float(obj){
+            this.ele=document.querySelector(obj.selector);
+            this.speedX=obj.speedX;
+            this.speedY=obj.speedY;
+            this.offsetL=this.ele.offsetLeft;
+            this.offsetT=this.ele.offsetTop;
+            let timer=setInterval(()=>{
+                this.offsetL+=this.speedX;
+                this.offsetT+=this.speedY;
+                if(this.offsetL>=window.innerWidth-this.ele.offsetWidth || this.offsetL<=0)
+                    this.speedX=-this.speedX;
+                if(this.offsetT>=window.innerHeight-this.ele.offsetHeight ||this.offsetT<=0)
+                    this.speedY=-this.speedY;
+                this.ele.style.left=this.offsetL+"px";
+                this.ele.style.top=this.offsetT+"px";
+            },obj.time)
+        }
+        let obj={
+            selector:".box",
+            speedX:10,
+            speedY:10,
+            time:20
+        }
+        let xuanfu=new Float(obj);
+    </script>
+</body>
+</html>

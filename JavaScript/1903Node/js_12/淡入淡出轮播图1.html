@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .box {
+            width: 600px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 20px 3px red;
+            overflow: hidden;
+        }
+        
+        ul.img {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 400px;
+            font-size: 100px;
+            color: #fff;
+            position: relative;
+        }
+        
+        ul li {
+            width: 100%;
+            height: 100%;
+            background: green;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 1s ease-in-out;
+            opacity: 0;
+        }
+        
+        .btn {
+            width: 40px;
+            height: 70px;
+            background: #fff;
+            position: absolute;
+            top: 165px;
+            font-size: 24px;
+            color: #000;
+            text-align: center;
+            line-height: 70px;
+            z-index: 10;
+        }
+        
+        .bth-left {
+            left: 0;
+        }
+        
+        .btn-right {
+            right: 0;
+        }
+        
+        .dots {
+            width: 100px;
+            height: 10px;
+            position: absolute;
+            bottom: 30px;
+            left: 250px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .dots .dot {
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            border: 2px solid #b0b0b0;
+            box-sizing: border-box;
+        }
+        
+        .dot.hover {
+            background: #ff6700;
+            border-color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <ul class="img">
+            <li class="imgs">1
+            </li>>
+            <li class="imgs">2
+            </li>>
+            <li class="imgs">3
+            </li>>
+            <li class="imgs">4
+            </li>>
+            <li class="imgs">5
+            </li>>
+        </ul>
+        <div class="btn btn-left">
+            < </div>
+                <div class="btn btn-right"> > </div>
+                <div class="dots">
+                    <div class="dot hover"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+        </div>
+        <script>
+            //获取图片集合
+            let imgs = document.querySelectorAll(".imgs");
+            imgs[0].style.opacity = 1; //默认显示第一张
+            let dot = document.querySelectorAll(".dot"); //获取轮播点的集合
+            //获取左边的箭头
+            let btnL = document.querySelector(".btn-left");
+            //获取右边的箭头
+            let btnR = document.querySelector(".btn-right");
+            //获得最大的盒子
+            let box = document.getElementsByClassName("box");
+            //淡入淡出的轮播图，通过控制图片的透明度实现淡入淡出 
+            let index = 0; //记录当前的图片下标
+            let t = setInterval(() => {
+                    imgs.forEach((v, i) => {
+                        v.style.opacity = 0; //将图片的透明度初始化
+                        dot[i].classList.remove("hover"); //通过改变类名来控制轮播点的变化
+                    })
+                    index++; //图片下标自增，实现自动轮播
+                    if (index > 4) { //判断当下标大于图片数量的时候，让index=0;实现下标的循环
+                        index = 0;
+                    }
+                    imgs[index].style.opacity = 1; //当前图片的透明度为1
+                    dot[index].classList.add("hover"); //对应显示轮播点
+                }, 1500)
+                //点击右侧按钮显示下一张
+            btnR.onclick = function() {
+                    imgs.forEach((v, i) => {
+                        v.style.opacity = 0;
+                        dot[i].classList.remove("hover")
+                    })
+                    index++;
+                    if (index > 4) {
+                        index = 0;
+                    }
+                    imgs[index].style.opacity = 1;
+                    dot[index].classList.add("hover");
+                }
+                //点击左侧按钮显示上一张
+            btnL.onclick = function() {
+                    imgs.forEach((v, i) => {
+                        v.style.opacity = 0;
+                        dot[i].classList.remove("hover")
+                    })
+                    index--;
+                    if (index < 0) {
+                        index = 4;
+                    }
+                    imgs[index].style.opacity = 1;
+                    dot[index].classList.add("hover");
+                }
+                //轮播点点击事件 
+            dot.forEach((v, i) => {
+                v.onclick = function() {
+                    imgs.forEach((v, i) => {
+                        v.style.opacity = 0;
+                        dot[i].classList.remove("hover")
+                    })
+                    index = i;
+                    imgs[index].style.opacity = 1;
+                    dot[index].classList.add("hover");
+                }
+            })
+            box[0].onmouseover = function() {
+                clearInterval(t);
+            }
+            box[0].onmouseout = function() {
+                t = setInterval(() => {
+                    imgs.forEach((v, i) => {
+                        v.style.opacity = 0; //将图片的透明度初始化
+                        dot[i].classList.remove("hover"); //通过改变类名来控制轮播点的变化
+                    })
+                    index++; //图片下标自增，实现自动轮播
+                    if (index > 4) { //判断当下标大于图片数量的时候，让index=0;实现下标的循环
+                        index = 0;
+                    }
+                    imgs[index].style.opacity = 1; //当前图片的透明度为1
+                    dot[index].classList.add("hover"); //对应显示轮播点
+                }, 1500)
+            }
+        </script>
+</body>
+
+</html>

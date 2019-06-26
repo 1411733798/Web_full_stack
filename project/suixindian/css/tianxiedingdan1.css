@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header{
+    width: 100%;
+    height: 2.31rem;
+    background: linear-gradient(to right,#ff3432,#ff7919);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    line-height: 0.44rem;
+    z-index: 9;
+}
+.header .header_w{
+    width: 7rem;
+    margin: 0 auto;
+    position: relative;
+}
+.header .header_w .iconfont{
+    float: left;
+    color: #fff;
+    font-size: 0.4rem;
+    line-height: 0.88rem;
+}
+.title{
+    font-size: 0.34rem;
+    color: #fff;
+}
+.butt{
+    width: 1.74em;
+    height: 0.64rem;
+    position: absolute;
+    top: 0.12rem;
+    right: 0.14rem;
+    float: left;
+    background: #d66122;
+    border-radius: 0.87rem;
+}
+.butt .round{
+    width: 0.87rem;
+    height: 0.14rem;
+    line-height: 0.24rem;
+    margin: 0.22rem 0.25rem;
+}
+.butt .round .dian{
+    width: 0.08rem;
+    height: 0.08rem;
+    margin-top: 0.02rem;
+    background: #fff;
+    border-radius: 50%;
+    float: left;
+}
+.butt .round .dian:nth-child(2){
+    width: 0.12rem;
+    height: 0.12rem;
+    margin: 0 0.03rem;
+}
+.tw{
+    width: 0.87rem;
+    height: 0.37rem;
+    border-left: 0.05rem solid #d88958;
+    float: right;
+    position: absolute;
+    top: 0.12rem;
+    right: 0;
+}
+.tw .wai{
+    width: 0.14rem;
+    height: 0.14rem;
+    margin: 0.1rem 0.3rem 0.14rem 0.18rem;
+    border: 0.04rem solid #fff;
+    border-radius: 50%;
+    position: relative;
+}
+.tw .wai .small{
+    width: 0.05rem;
+    height: 0.05rem;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 0.05rem;
+    top: 0.05rem;
+}
+.ter{
+    width: 100%;
+    height: 2.47rem;
+    float: left;
+    margin-top: 1.84rem;
+    z-index: 99;
+    opacity: 0.9;
+    position: relative;
+}
+.ter .ter_w{
+    width: 7rem;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 99;
+    background: #fff;
+    position: relative;
+    /* box-shadow: 0 0 0.2rem 0.1rem #fef5f2; */
+    border-radius: 0.1rem;
+}
+.ter_w span{
+    font-size: 0.3rem;
+    color: #000000;
+    opacity: 0.7;
+    float: left;
+    line-height: 0.32rem;
+    padding-top: 0.43rem;
+    padding-left: 0.31rem;
+}
+.ter_w .iconfont{
+    font-size: 0.3rem;
+    color: #000000;
+    opacity: 0.7;
+    float: right;
+    padding-top: 0.43rem;
+    padding-right: 0.31rem;
+}
+.ter_w .line{
+    width: 6.38rem;
+    height: 1.45rem;
+    float: left;
+    margin-left: 0.21rem;
+    border-top: 0.01rem solid #a8a5a5;
+    margin-top: 0.3rem;
+}
+.line h5{
+    font-size: 0.24rem;
+    color: #000000;
+    opacity: 0.5;
+}
+.line h5:nth-child(2){
+    padding-top: 0.1rem;
+}
+.line h5:last-child{
+    color: #ff5726;
+    float: right;
+    opacity: 1;
+}
+
+.cont{
+    width: 100%;
+    height: 4.54rem;
+    float: left;
+    margin-top: 0.2rem;
+    opacity: 0.5;
+}
+.cont .cont_w{
+    width: 7rem;
+    height: 4.54rem;
+    margin: 0 auto;
+    box-shadow: 0 0 1rem 0.1rem #fde3d9;
+    border-radius: 0.1rem;
+}
+.cont .cont_w .con_l{
+    width: 2rem;
+    height: 2.12rem;
+    float: left;
+    position: relative;
+}
+
+.con_l img{
+    width: 1.61rem;
+    height: 1.61rem;
+    position: absolute;
+    top: 0.35rem;
+    left: 0.34rem;;
+}
+.cont .cont_w .con_r{
+    width: 4.5rem;
+    height: 2.12rem;
+    float: right;
+    position: relative;
+}
+.con_r h5{
+    font-size: 0.28rem;
+    padding-top: 0.52rem;
+    color: #333;
+}
+
+.go{
+    width: 2rem;
+    height: 0.35rem;
+    margin-top: 0.34rem;
+    font-size: 0.26rem;
+    color: #ff3931;
+}
+.go .ll{
+    font-size: 0.32rem;
+    font-weight: blod;
+}
+.chen{
+    width: 0.5rem;
+    height: 0.5rem;
+    position: absolute;
+    right: 0.36rem;
+    font-size: 0.3rem;
+    color: #999999;
+    top: 1.06rem;
+}
+.line{
+    width: 6.38rem;
+    height: 1.45rem;
+    float: left;
+    margin-left: 0.21rem;
+    border-top: 0.01rem solid #a8a5a5;
+    margin-top: 0.3rem;
+    position: relative;
+}
+.liu{
+    position: absolute;
+    top: 0.2rem;
+    right: 0;
+    font-size: 0.28rem;
+    padding-top: 0.42rem;
+    color: #999999;
+}
+.total{
+    width: 100%;
+    height: 0.4rem;
+    float: left;
+    margin-top: 0.2rem;
+}
+.zong{
+    float: left;
+    color: #ff5751;
+    font-size: 0.3rem;
+    width: 1rem;
+}
+.gg{
+    margin-top: 0;
+}
+
+.lj{
+    width: 100%;
+    height: 0.98rem;
+    float: left;
+    margin-top: 0.2rem;
+    text-align: center;
+    background: linear-gradient(to right,#ff3432,#ff7919);
+}
+.lj a{
+    display: block;
+    line-height: 0.98rem;
+    font-size: 0.38rem;
+    color: #fff;
+    text-decoration: none;
+}
+.zhf{
+    width: 100%;
+    height: 5.88rem;
+    float: left;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+}
+.fs{
+    width: 100%;
+    height: 0.84rem;
+    float: left;
+    text-align: center;
+    line-height: 0.54rem;
+}
+.fs .iconfont{
+    float: left;
+    color: #000000;
+    opacity: 0.4;
+    font-size: 0.4rem;
+    padding-top: 0.3rem;
+    margin-left: 0.2rem;
+}
+.fs .title{
+    font-size: 0.38rem;
+    color: #000000;
+    opacity: 0.4;
+}
+.top_w{
+    width: 7rem;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.toop{
+    width: 100%;
+    height: 0.84rem;
+    float: left;
+    text-align: center;
+    font-size: 0.38rem;
+    color: #fff;
+    line-height: 0.84rem;
+}
+.toop .iconfont{
+    float: left;
+    color: #fff;
+    font-size: 0.4rem;
+}
+
+.vx{
+    width: 100%;
+    height: 1.18rem;
+    float: left;
+}
+.vx .vx_w{
+    width: 7rem;
+    height: 100%;
+    box-shadow: 0 0 1rem 0.1rem #f8e9e3;
+    margin: 0 auto;
+    position: relative;
+}
+.vx_w .iconfont{
+    width: 0.96rem;
+    height: 0.78rem;
+    font-size: 0.78rem;
+    color: #00c800;
+    position: absolute;
+    top: 0.2rem;
+    left: 0.32rem;
+
+}
+.vx_w span{
+    font-size: 0.3rem;
+    color: #999999;
+    padding-top: 0.4rem;
+    float: left;
+    margin-left: 1.65rem;
+}
+.vx_w .yuan{
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    right: 0.28rem;
+    top: 0.55rem;
+    background: #ff5726;
+    border-radius: 50%;
+    border: 0.1rem solid #e2ccc3;
+    float: right;
+}
+.xx{
+    margin-top: 0.2rem;
+}
+
+input{
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    float: right;
+    margin: 0.4rem  0.5rem 0 0;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // let obj1={
+    //     name:"张三"
+    // }
+    // let obj2={
+    //     sex:"男"
+    // }
+    // let obj3={
+    //     say(){
+    //         console.log("ssss")
+    //     }
+    // }
+    // let obj=Object.assign(obj1,obj2,obj3)
+    // console.log(obj)
+    // console.log(obj1)
+
+    // function Animal(){
+
+    // }
+    // var dog = new Animal();
+    // console.log(Animal.prototype.isPrototypeOf(dog));      //true
+
+    let obj = new Object();
+    Object.defineProperty(obj, 'name', {
+        configurable: false,
+        writable: true,
+        enumerable: true,           //该属性是否可枚举
+        value: '张三'
+    })
+    console.log(obj.name)  //张三
+    console.log(obj)  //{name: "张三"}
+    </script>
+</body>
+</html>

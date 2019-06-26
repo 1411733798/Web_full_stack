@@ -1,0 +1,288 @@
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        box-sizing: border-box;
+                    }
+                    
+                    body {
+                        background: #f4f4f4;
+                    }
+                    
+                    .bg-box {
+                        width: 100%;
+                        height: 7rem;
+                        background: url(../img/背景.png);
+                        background-size: 100% 7rem;
+                        padding: 0 0.24rem;
+                    }
+                    
+                    .header {
+                        width: 100%;
+                        height: 40px;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    
+                    .header>.left {
+                        width: 0.24rem;
+                        height: 100%;
+                        text-align: center;
+                        line-height: 0.4rem;
+                    }
+                    
+                    .left>.iconfont {
+                        font-size: 0.32rem;
+                        color: #fff;
+                    }
+                    
+                    .header>.middle {
+                        height: 0.4rem;
+                        line-height: 0.4rem;
+                    }
+                    
+                    .middle>.iconfont {
+                        font-size: 0.24rem;
+                        color: #fff;
+                    }
+                    
+                    .middle>span {
+                        font-size: 0.34rem;
+                    }
+                    
+                    .right {
+                        width: 0.5rem;
+                        height: 0.4rem;
+                        float: right;
+                        margin-top: 10px;
+                    }
+                    
+                    .right .iconfont {
+                        display: block;
+                        font-size: 0.34rem;
+                        color: #fff;
+                    }
+                    
+                    .bottom {
+                        width: 100%;
+                        height: 2.16rem;
+                    }
+                    
+                    .air {
+                        width: 0.9rem;
+                        height: 0.6rem;
+                        background: #f1ab62;
+                        border-radius: 0.08rem;
+                        margin-top: 0.2rem;
+                        font-size: 0.12rem;
+                        color: #fff;
+                        text-align: center;
+                    }
+                    
+                    .bottom-text1 {
+                        width: 0.9rem;
+                        height: 0.6rem;
+                        font-size: 0.54rem;
+                        color: #fff;
+                        text-align: center;
+                        font-weight: normal;
+                        margin: 0 auto;
+                    }
+                    
+                    .bottom-text2 {
+                        width: 100%;
+                        height: 0.46rem;
+                        font-size: 0.4rem;
+                        color: #fff;
+                        text-align: center;
+                        line-height: 0.46rem;
+                        margin-top: 0.1rem;
+                    }
+                    
+                    .bottom-text2.text3 {
+                        font-size: 0.24rem
+                    }
+                    
+                    .bottom-text2.text4 {
+                        font-size: 0.26rem;
+                        margin-top: 0.5rem;
+                    }
+                    
+                    .weather {
+                        width: 100%;
+                        height: 1rem;
+                        background: #fff;
+                        padding: 0.1rem 0.24rem 0 0.24rem;
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom: 0.01rem solid #f0f0f0;
+                        margin-bottom: 0.1rem;
+                    }
+                    
+                    .today {
+                        width: 50%;
+                        height: 0.52rem;
+                        display: flex;
+                        justify-content: space-between;
+                        float: left;
+                        padding: 0 0.24rem;
+                        border-right: 0.01rem solid #f0f0f0;
+                    }
+                    
+                    .name {
+                        width: 0.8rem;
+                        height: 100%;
+                        display: block;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+                    
+                    .name>p {
+                        font-size: 0.14rem;
+                        margin-bottom: 0.1rem;
+                    }
+                    
+                    .stasus {
+                        width: 0.72rem;
+                        height: 100%;
+                    }
+                    
+                    .status>p {
+                        height: 0.2rem;
+                        font-size: 0.14rem;
+                    }
+                    
+                    .status>.sun {
+                        width: 0.18rem;
+                        height: 0.18rem;
+                        border-radius: 50%;
+                        background: #ffd544;
+                        ;
+                        margin: 0.18rem auto 0;
+                    }
+                    
+                    .cloudy {
+                        width: 0.28rem;
+                        height: 0.28rem;
+                        background: url(../img/weather\ \(3\).png);
+                        background-size: 0.3rem 0.3rem;
+                        margin: 0.1rem auto 0;
+                    }
+                    
+                    .cloudy>img {
+                        width: 100%;
+                        height: auto;
+                    }
+                    
+                    .today:nth-child(2) {
+                        border-right: none;
+                    }
+                    
+                    .time {
+                        width: 100%;
+                        height: 1.46rem;
+                        background: #fff;
+                        margin-bottom: 0.1rem;
+                        border-bottom: 0.01rem solid #f0f0f0;
+                        border-top: 0.01rem solid #f0f0f0;
+                    }
+                    
+                    .items {
+                        width: 0.8rem;
+                        height: 100%;
+                        padding: 0.3rem 0 0 0.24rem;
+                        float: left;
+                        margin-left: 0.4rem;
+                    }
+                    
+                    .items>p {
+                        width: 100%;
+                        font-size: 0.12rem;
+                        color: #999;
+                        text-align: center;
+                    }
+                    
+                    .items>.img {
+                        width: 0.3rem;
+                        height: 0.3rem;
+                        background: url(../img/weather\ \(4\).png);
+                        background-size: 0.3rem 0.3rem;
+                        margin: 0.1rem auto;
+                    }
+                    
+                    .items:nth-child(1) {
+                        margin-left: 0.1rem;
+                    }
+                    
+                    .detail {
+                        width: 100%;
+                        height: 3.9rem;
+                        background: #fff;
+                        margin-bottom: 0.1rem;
+                        border-bottom: 0.01rem solid #f0f0f0;
+                        border-top: 0.01rem solid #f0f0f0;
+                    }
+                    
+                    .detail>.time1 {
+                        border: none;
+                        width: 100%;
+                        height: 1.46rem;
+                        background: #fff;
+                    }
+                    
+                    .time2 {
+                        width: 100%;
+                        height: 1.6rem;
+                        margin-top: 0.5rem;
+                    }
+                    
+                    .out {
+                        width: 100%;
+                        height: 1.9rem;
+                        background: #fff;
+                        border-bottom: 0.01rem solid #f0f0f0;
+                        border-top: 0.01rem solid #f0f0f0;
+                    }
+                    
+                    .out-item {
+                        width: 25%;
+                        height: 50%;
+                        border-right: 0.01rem solid #f0f0f0;
+                        border-bottom: 0.01rem solid #f0f0f0;
+                        display: flex;
+                        flex-direction: column;
+                        padding-top: 0.1rem;
+                        float: left;
+                    }
+                    
+                    .out-item:nth-child(4n) {
+                        border-right: 0;
+                    }
+                    
+                    .out-item>.img {
+                        display: block;
+                        width: 0.3rem;
+                        height: 0.24rem;
+                        margin: 0 auto;
+                        background: url(../img/out.png) no-repeat center center;
+                        background-size: 0.3rem 0.24rem;
+                    }
+                    
+                    .img>img {
+                        width: 100%;
+                        height: auto;
+                    }
+                    
+                    .out-item>p {
+                        width: 100%;
+                        font-size: 0.12rem;
+                        color: #999;
+                        text-align: center;
+                    }
+                    
+                    .footer {
+                        width: 100%;
+                        height: 1rem;
+                        background: url(../img/footer.png) no-repeat center center;
+                        background-size: 100% 1rem;
+                    }

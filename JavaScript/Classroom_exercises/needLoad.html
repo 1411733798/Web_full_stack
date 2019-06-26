@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>按需加载</title>
+</head>
+<body>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+    body{
+        background:rgba(0,0,0,0.1);
+    }
+    .box{
+        width:1000px;
+        height:auto;
+        margin:20px auto 0;
+    }
+    .box .img{
+        width:90px;
+        float:left;   
+        overflow:hidden;
+        margin-right:10px;
+    }
+    .box .img img{
+        width:100%;
+    }
+    
+    
+    </style>
+
+    <ul class="box">
+        
+    </ul>
+    
+
+    <script>
+
+        //按需加载
+        //1.通过js将所有图片放在相应的盒子的中
+        let str=""
+        for(let i=0;i<100;i++){
+            str+=`
+                <li class="img">
+                    <img src="img/loading.gif" alt="" >
+                </li>
+            `
+        }
+        let box=document.querySelector(".box");
+        box.innerHTML=str;
+        //2.给img标签添加一个新属性，用来存放要加载的图片
+        let boxImg=document.querySelectorAll(".box .img img");
+        boxImg.forEach((v)=>{
+            v.setAttribute("temp-img","img/loadimg.jpg");
+        })
+        //3.开始时的窗口中，要显示已经加载好的图片
+        boxImg.forEach((v,i)=>{
+            
+        })
+
+    
+    
+    
+    </script>
+</body>
+</html>

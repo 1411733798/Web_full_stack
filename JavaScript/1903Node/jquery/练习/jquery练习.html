@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text">
+        <input type="password">
+        <input type="radio" name="" id="">
+        <input type="checkbox">
+        <input type="file">
+        <input type="image" name="" id="">
+        <input type="submit">
+        <input type="reset">
+    </form>
+</body>
+
+</html>
+<script src="../../jquery-3.4.1.js"></script>
+<script>
+    $(document.body).css("background", "red"); //设置页面背景色为红色
+    // $("form").hide(); //隐藏一个表单中所有元素。
+    //在文档的第一个表单中，查找所有的单选按钮(即: type 值为 radio 的 input 元素)。
+    $("input:radio", document.forms[0]);
+    $("<div></div>").appendTo("body");
+    //在body中动态创建div标签，
+    $("<div>", {
+        "class": "test",
+        text: "click on me",
+        click: function() {
+            $(this).toggleClass("test");
+        }
+    }).appendTo("body");
+    //在body中动态创建input标签，包括type、值，获得焦点时执行的函数，失去焦点是执行的函数
+    $("<input>", {
+        type: "text",
+        val: "test",
+        focusin: function() {
+            $(this).addClass("test");
+        },
+        focusout: function() {
+            $(this).removeClass("test");
+        }
+    }).appendTo("body");
+    //当DOM加载完成后，执行其中的函数。$(document).ready()的简写。
+    $(function() {})
+        //暂停或恢复.ready() 事件的执行。延迟就绪事件，直到已加载的插件。
+    $.holdReady(true);
+    $.getScript("myplugin.js", function() {
+        $.holdReady(false);
+    });
+    //each(callback)意味着，每次执行传递进来的函数时，函数中的this关键字都指向一个不同的DOM元素（每次都是一个不同的匹配元素）。而且，在每次执行函数时，都会给函数传递一个表示作为执行环境的元素在匹配的元素集合中所处位置的数字值作为参数（从零开始的整型）。 返回 'false' 将停止循环 (就像在普通的循环中使用 'break')。返回 'true' 跳至下一个循环(就像在普通的循环中使用'continue')。
+    //迭代两个图像，并设置它们的 src 属性。注意:此处 this 指代的是 DOM 对象而非 jQuery 对象。
+
+    HTML 代码:
+</script>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        
+        .tab-box {
+            width: 500px;
+            height: 350px;
+            background: darkturquoise;
+            border-radius: 20px;
+            border: 2px solid blue;
+            margin: 30px auto;
+        }
+        
+        .tab-head {
+            width: 100%;
+            height: 50px;
+            border-bottom: 2px solid blue;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .hd {
+            width: 33.3%;
+            height: 100%;
+            text-align: center;
+            line-height: 48px;
+            font-size: 24px;
+            color: #fff;
+            border-right: 2px solid blue;
+        }
+        
+        .hd:nth-child(3) {
+            border-right: 0;
+        }
+        
+        .tab-bd {
+            width: 100%;
+            height: 294px;
+            position: relative;
+            border-radius: 20px;
+        }
+        
+        .bd {
+            width: 100%;
+            height: 100%;
+            background: darkturquoise;
+            text-align: center;
+            line-height: 296px;
+            font-size: 20px;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab-box">
+        <div class="tab-head">
+            <div class="hd">选项一</div>
+            <div class="hd">选项二</div>
+            <div class="hd">选项三</div>
+        </div>
+        <ul class="tab-bd">
+            <li class="bd">一</li>
+            <li class="bd">二</li>
+            <li class="bd">三</li>
+        </ul>
+    </div>
+    <script>
+        //获取选项对应的内容
+        let hd = document.querySelectorAll(".hd");
+
+        let bd = document.querySelectorAll(".bd");
+        //hd中对应的第一个就是bd中的第一个，所以我们可以使用相同的下标来完成
+        hd.forEach((v, i) => {
+                v.onmouseover = function() {
+                        bd.forEach((value, index) => {
+                            bd[index].style.zIndex = "0"; //  在移入之后每一个bd层级都变为0  移入的bd层级变成1 
+                        })
+                        bd[i].style.zIndex = "1"; // v表示hd[i]   v对应hd标签  i表示hd对应的下标 
+                    } //在移出时，bd[i]层级还是1  所以还显示前一个移入时的效果
+            })
+            //思路在移入一个选项卡的时候，是所有的bd层级都为0，然后再给他对应的bd一个层及为1，在移出时，这个bd的层级还是1
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,875 @@
+#header{
+    width: 100%;
+    height: 0.88rem;
+    float: left;
+    background: #fff;
+    position: fixed;
+    z-index: 9;
+}
+.hea_w{
+    width: 7.5rem;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 0.44rem;
+    border-bottom: 0.01rem solid #f2f2f2;
+}
+.hea_w .cuo .iconfont{
+    font-size: 0.36rem;
+    display: block;
+    color: #000000;
+    float: left;
+    padding: 0.29rem 0 0 0.24rem;
+}
+.hea_w .title{
+    width: 0.92rem;
+    height: 0.3rem;
+    font-size: 0.36rem;
+    letter-spacing: 0.11rem;
+    font-family: 'GillSansMT-ExtraCondensedBold';
+}
+.hea_w .title span{
+    letter-spacing: 0.11rem;
+    color: #ffcb3f;
+}
+.hea_w .set{
+    width: 0.36rem;
+    height: 0.08rem;
+    float: right;
+    margin-right: 0.23rem;
+    display: block;
+    padding-top: 0.4rem;
+}
+.hea_w .set .itm{
+    width: 0.08rem;
+    height: 0.08rem;
+    float: left;
+    background: #000000;
+    border-radius: 50%;
+}
+.hea_w .set .itm:nth-child(2){
+    margin:0  0.06rem;
+}
+.list{
+    width: 100%;
+    height: 0.88rem;
+    float: left;
+    margin-top: 0.88rem;
+}
+.list_w{
+    width: 7.5rem;
+    height: 0.88rem;
+    margin: 0 auto;
+}
+.list_w a{
+    width: 1rem;
+    height: 0.24rem;
+    font-size: 0.24rem;
+    line-height: 0.98rem;
+    display: block;
+    margin: 0 1.37rem;
+    color: #000000;
+    
+    float: left;
+    opacity: 0.6;
+    position: relative;
+}
+.list_w .col{
+    font-weight: bold;
+    color: #ffcb3f;
+}
+.list_w a span{
+    width: 0.46rem;
+    background: #ffcb3f;
+    height: 0.03rem;
+    position: absolute;
+    left: 0.26rem;
+    top: 0.84rem;
+}
+.banner{
+    width: 100%;
+    height: 5rem;
+    float: left;
+}
+.banner_w{
+    width: 7.5rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.banner_w a img{
+    display: block;
+    width: 7.5rem;
+    height: 5rem;
+}
+.banner_w .page{
+    width: 0.58rem;
+    height: 0.23rem;
+    position: absolute;
+    right: 0.18rem;
+    bottom: -0.3rem;
+}
+.banner_w .page span{
+    font-size: 0.30rem;
+    float: left;
+    letter-spacing: 0.01rem;
+    color: #ffcb3f;
+}
+.bosc{
+    width: 100%;
+    height: 4.49rem;
+    float: left;
+    margin-top: 0.64rem;
+}
+.bosc_w{
+    width: 6.66rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.bosc_w .bo{
+    width: 6.66rem;
+	height: 0.3rem;
+	font-family: 'MicrosoftYaHei-Bold';
+	font-size: 0.3rem;
+	line-height: 0.36rem;
+	letter-spacing: 0.03rem;
+    color: #000000;
+}
+.bosc_w .do{
+    width: 100%;
+    height: 0.02rem;
+    float: left;
+    background: #d7d7d7;
+    margin-top: 0.22rem;
+    position: relative;
+}
+.bosc_w .du{
+    width: 0.47rem;
+    height: 0.02rem;
+    float: left;
+    position: relative;
+    top: 0;
+    z-index: 9;
+    background: #ffcb3f;
+}
+.bosc_w .zl{
+    font-size: 0.24rem;
+    margin-top: 0.31rem;
+    width: 0.60rem;
+    float: left;
+	height: 0.24rem;
+	line-height: 0.36rem;
+	letter-spacing: 0.02rem;
+	color: #000000;
+}
+.bosc_w .mod{
+    float: left;
+    width: 100%;	
+	height: 0.25rem;
+	font-size: 0.24rem;
+	line-height: 0.26rem;
+	letter-spacing: 0.02rem;
+    margin-top: 0.31rem;
+	color: #000000;
+}
+.bosc_w .gug{
+    float: left;
+    width: 100%;	
+	height: 0.25rem;
+	font-size: 0.24rem;
+	line-height: 0.26rem;
+	letter-spacing: 0.02rem;
+    margin-top: 0.31rem;
+	color: #000000;
+}
+.bosc_w .col{
+    float: left;
+    height: 0.39rem;
+	font-size: 0.24rem;
+	line-height: 0.26rem;
+	letter-spacing: 0.02rem;
+    margin-top: 0.54rem;
+    color: #000000;
+}
+.bosc_w .quu{
+    width: 5.5rem;
+    height: 0.39rem;
+    float: right;
+    margin-top: 0.5rem;
+}
+.bosc_w .quu .rot{
+    width: 0.23rem;
+    height: 0.23rem;
+    float: left;
+    border-radius: 50%;
+    background: #ffcb3f;
+    margin-right: 0.53rem;
+    border: 0.1rem solid #fff;
+}
+.bosc_w .quu .rot:nth-child(2){
+    background: #fff;
+    border: 0.1rem solid #d880d7;
+}
+.bosc_w .quu .rot:nth-child(3){
+    background: #fff;
+    border: 0.1rem solid #b5d548;
+}
+.bosc_w .quu .rot:nth-child(4){
+    background: #fff;
+    border: 0.1rem solid #efc5a1;
+}
+.bosc_w .quu .wai{
+    width: 0.40rem;
+    height: 0.40rem;
+    border: 0.03rem solid #ffcb3f;
+    border-radius: 50%;
+    float: left;
+    position: relative;
+    top: -0.11rem;
+    left: -0.12rem;
+}
+.bosc_w .quu .rot .wai .ww{
+    width: 0.6rem;
+    height: 0.6rem;
+    float: left;
+    border: 0.01rem solid #ffcb3f;
+    border-radius: 50%;
+    position: relative;
+    top: -0.1rem;
+    left: -0.1rem;
+}
+.bosc_w .pei{
+    float: left;
+    width: 100%;	
+	height: 0.25rem;
+	font-size: 0.24rem;
+	line-height: 0.26rem;
+	letter-spacing: 0.02rem;
+    margin-top: 0.31rem;
+	color: #000000;
+}
+.bosc_w .pric{
+    width: 1.48rema;
+	height: 0.23rem;
+	font-family: 'Arial-BoldMT';
+	font-size: 0.3rem;
+    line-height: 00.36rem;
+    float: left;
+	letter-spacing: 0.03rem;
+    color: #000000;
+    margin-top: 0.34rem;
+    font-weight: bold;
+}
+.bosc_w .pric .rem{
+    float: right;
+    font-family: 'Arial-BoldMT';
+	font-size: 0.16rem;
+	font-weight: normal;
+	letter-spacing: 0.02rem;
+    color: #000000;
+    line-height: 0.5rem;
+}
+.bosc_w .shop{
+    width: 100%;
+    height: 24px;
+    float: left;
+	font-family: 'MicrosoftYaHei';
+	font-size: 0.24rem;
+	line-height: 0.6rem;
+	letter-spacing: 0.02rem;
+    color: #000000;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.bosc_w .shop .jia{
+    width: 2rem;
+    height: 0.43rem;
+    float: right;
+}
+.bosc_w .shop .jia .oo{
+    width: 0.43rem;
+    height: 0.43rem;
+    float: left;
+	font-size: 0.34rem;
+	line-height: 0.36rem;
+	letter-spacing: 0.03rem;
+    color: #000000;
+    border: 0.01rem solid #e2e2e2;
+    text-align: center;
+    line-height: 0.43rem;
+}
+.bosc_w .shop .jia .oo:nth-child(2){
+    margin: 0 0.32rem;
+}
+.lil{
+    width: 100%;
+    height: 0.65rem;
+    float: left;
+    margin-top: 0.8rem;
+}
+.lil_w{
+    width: 3.01rem;
+    height: 100%;
+    float: left;
+    border-top: 0.02rem solid #e2e2e2;
+	font-size: 0.24rem;
+	line-height: 0.26rem;
+	letter-spacing: 0.02rem;
+    color: #000000;
+    position: relative;
+    margin-left: 0.4rem;
+    padding-top: 0.38rem;
+}
+.lil_w span{
+    font-size: 0.36rem;
+	letter-spacing: 0.03rem;
+    color: #ffcb3f;
+}
+.lil_w .lan{
+    width: 0.48rem;
+    height: 0.02rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffcb3f;
+}
+.read{
+    width: 100%;
+    height: 5.1rem;
+    float: left;
+    margin-top: 0.31rem;
+    overflow: auto;
+}
+.read_w{
+    width: 10rem;
+    height: 100%;
+    overflow: auto;
+}
+.read .rel{
+    width: 3.1rem;
+    height: 100%;
+    float: left;
+    margin-left: 0.21rem;
+    position: relative;
+}
+.read .rel a img{
+    width: 3.1rem;
+    height: 2.91rem;
+    display: block;
+
+}
+.eq{
+    width: 0.27rem;
+    height: 0.17rem;
+    float: left;
+    border-bottom: 0.01rem solid #000;
+}
+ .read .rel .vios{
+	height: 0.24rem;
+	font-family: 'ArialNarrow';
+	font-size: 0.18rem;
+    line-height: 0.20rem;
+	letter-spacing: 0.01rem;
+    color: #000000;
+    margin-top: 0.28rem;
+}
+.sah{
+    font-size: 0.20rem;
+    color: #000;
+    float: left;
+}
+.rel .xia{
+    width: 100%;
+	height: 0.21rem;
+	line-height: 0.2rem;
+    color: #000000;
+    float: left;
+    position: absolute;
+    bottom: 0.33rem;
+    font-size: 0.18rem;
+    left: 0;
+}
+.rel .xia span{
+    font-family: ArialNarrow;
+    float: left;
+	font-size: 0.26rem;
+    color: #000000;
+}
+
+.rel .xia a button{
+    display: block;
+    width: 1.53rem;
+    height: 0.44rem;
+    float: right;
+    background: #ffcb3f;
+    font-size: 0.22rem;
+    border-radius: 0.04rem;
+    border: 0;
+    font-weight: blod;
+    color: #fff;
+    margin-right: 0.21rem;
+    position: relative;
+    top: -0.1rem;
+}
+.rel .xia button .iconfont{
+    font-size: 0.16rem;
+    color: #fff;
+}
+.deta{
+    width: 100%;
+    height: 0.92rem;
+    float: left;
+}
+.deta .dat_bx{
+    width: 2.21em;
+    height: 0.92em;
+    margin-top: 1.07rem;
+    margin-left: 2.43rem;
+}
+.dat_bx .shor{
+    width: 0.27rem;
+    height: 0.02rem;
+    background: #ffcb3f;
+    float: left;
+    margin-left: 0.39rem;
+}
+.dat_bx .qwe{
+    width: 1.47rem;
+    height: 0.01rem;
+    background: #d7d7d7;
+    float: left;
+    margin-left: 0.39rem;
+    margin-top: 0.1rem;
+}
+.dat_bx p{
+    width: 100%;
+	height: 0.15rem;
+	font-size: 0.18rem;
+	line-height: 0.36rem;
+	color: #000000;
+}
+.dat_bx .xq{
+    font-size: 0.32rem;
+    color: #000;
+    float: left;
+    margin-top: 0.41rem;
+    margin-left: 0.35rem;
+}
+.dat_bx .xq span{
+    color: #ffcb3f;
+}
+.dat_bx .bln{
+    margin: 0.3rem 0.45rem 0 0.8rem;
+    background: #000;
+    position: relative;
+    width: 0.34rem;
+    float: left;
+    height: 0.02rem;
+}
+.fa{
+    width: 100%;
+    height: 5.48rem;
+    float: left;
+    margin-top: 2.2rem;
+}
+.fa_w{
+    width: 6.41rem;
+    height: 5.48rem;
+    position: relative;
+    margin: 0 auto;
+}
+.fa_w .fhn{
+    width: 2.91rem;
+    height: 3.5rem;
+    display: block;
+    margin: 1.45rem 2rem 0.53rem 1.5rem;
+}
+.fa_w .fhn img{
+    width: 2.91rem;
+    height: 3.5rem;
+}
+.fa_w .topp{
+    width: 2.91rem;
+    height: 0.48rem;
+    border: 0.01rem solid #ffcb3f;
+    position: absolute;
+    top: -0.48rem;
+    left: 1.5rem;
+    border-bottom: 0;
+    float: left;
+
+}
+.fa_w .leff{
+    height: 3.4rem;
+    width: 0.55rem;
+    float: left;
+    border: 0.01rem solid #ffcb3f;
+    position: absolute;
+    top: 0;
+    left: 1.1rem;
+    border-right: 0;
+}
+.fa_w .btto{
+    width: 2.15rem;
+    height: 0.52rem;
+    float: left;
+    border: 0.01rem solid #ffcb3f;
+    position: absolute;
+    top: 3.4rem;
+    left: 1.85rem;
+    border-top: 0;
+}
+.fa_w .ws{
+    font-size: 0.18rem;
+    color: #000;
+    width: 0.83rem;
+    height: 0.19rem;
+    background: #fff;
+    position: absolute;
+    top: -0.58rem;
+    left: 2.5rem;
+}
+.fa_w .wl{
+    font-size: 0.18rem;
+    color: #000;
+    width: 0.19rem;
+    height: 0.83rem;
+    background: #fff;
+    position: absolute;
+    top: 1.58rem;
+    left: 0.8rem;
+}
+.fa_w .wt{
+    font-size: 0.18rem;
+    color: #000;
+    width: 0.83rem;
+    height: 0.19rem;
+    background: #fff;
+    position: absolute;
+    top: 3.8rem;
+    left: 2.5rem;
+}
+.fa_w .sun{
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 0.01rem solid #ffcb3f;
+    position: absolute;
+    top: -1.85rem;
+    left: 0;
+    border-radius: 50%;
+}
+.fa_w .sun .opp{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    float: left;
+    background: #ffcb3f;
+    border: 0.01rem solid #ffcb3f;
+    position: relative;
+    top: 0.1rem;
+    left: 0.1rem;
+    color: #fff;
+    font-size: 0.22rem;
+    line-height: 1rem;
+    text-align: center;
+}
+.fa_w .sun .small{
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50%;
+    background: #fff;
+    border: 0.01rem solid #ffcb3f;
+    position: absolute;
+    top: 0.19rem;
+    left: 0.07rem;
+}
+.fa_w .sun .sma{
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50%;
+    background: #fff;
+    border: 0.01rem solid #ffcb3f;
+    position: absolute;
+    bottom: 0.19rem;
+    right: 0.07rem;
+}
+.fa_w .sort .opp{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    float: left;
+    background: #ffcb3f;
+    border: 0.01rem solid #ffcb3f;
+    position: relative;
+    top: 0.1rem;
+    left: 0.1rem;
+    color: #fff;
+    font-size: 0.22rem;
+    line-height: 1rem;
+    text-align: center;
+}
+.fa_w .sort{
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 0.01rem solid #ffcb3f;
+    position: absolute;
+    top: 1.25rem;
+    right: 0;
+    border-radius: 50%;
+}
+.fa_w .sort .small{
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50%;
+    background: #fff;
+    border: 0.01rem solid #ffcb3f;
+    position: absolute;
+    top: 0.19rem;
+    left: 0.07rem;
+}
+.fa_w .sort .sma{
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50%;
+    background: #fff;
+    border: 0.01rem solid #ffcb3f;
+    position: absolute;
+    bottom: 0.19rem;
+    right: 0.07rem;
+}
+.fa_w .alin{
+    width: 0.55rem;
+    height: 0.65rem;
+    position: absolute;
+    left: 0.9rem;
+    top: -0.95rem;
+    float: left;
+    
+}
+.fa_w .alin .saj{
+    width: 0.9rem;
+    height: 0.01rem;
+    float: left;
+    margin-top: 0.5rem;
+    background: #ffcb3f;
+    transform: rotate(55deg);
+}
+.fa_w .flk{
+    width: 1.1rem;
+    height: 0.01rem;
+    float: left;
+    background: #ffcb3f;
+    transform: rotate(-17deg);
+    position: absolute;
+    right: 1.28rem;
+    bottom: 3.45rem;
+}
+.big{
+    width: 100%;
+    height: 4.14rem;
+    float: left;
+    margin-top: 1.08rem;
+}
+.big a img{
+    width: 7.5rem;
+    height: 4.14rem;
+    display: block;
+}
+.cj{
+    width: 100%;
+    height: 0.46rem;
+    float: left;
+}
+.cj_w{
+    width: 1.06rem;
+    height: 0.46rem;
+    margin: 0 auto;
+    margin-top: 0.72rem;
+    text-align: center;
+}
+.cj_w p{
+    font-size: 0.24rem;
+    color: #000;
+}
+.plum{
+    width: 100%;
+    height: 4.16rem;
+    float: left;
+    margin-top: 1.65rem;
+}
+.plum a img{
+    width: 7.5rem;
+    height: 4.16rem;
+    display: block;
+}
+.liuc{
+    width: 100%;
+    height: 1.92rem;
+    margin-top: 1.55rem;
+    float: left;
+}
+.liuc .li_w{
+    width: 6.64rem;
+    height: 1.92rem;
+    margin: 0 auto;
+}
+.li_w .sss{
+    width: 100%;
+    height: 0.98rem;
+}
+.li_w .un:last-child{
+    margin-left: 0;
+}
+.li_w .sss .cerr{
+    width: 6rem;
+    height: 0.01rem;
+    background: #ffcb3f;
+    float: left;
+    margin-top: -0.55rem;
+
+}
+.li_w .un{
+    width: 1.2rem;
+    height: 1.2rem;
+    float: left;
+    margin-right: 0.42rem;
+    border: 0.01rem solid #ffcb3f;
+    border-radius: 50%;
+    background: #fff;
+    position: relative;
+}
+.li_w .un .op{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    float: left;
+    background: #ffcb3f;
+    border: 0.01rem solid #ffcb3f;
+    position: relative;
+    top: 0.1rem;
+    left: 0.1rem;
+    color: #fff;
+    font-size: 0.22rem;
+    line-height: 1rem;
+    text-align: center;
+}
+.sss .un .small{
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50%;
+    background: #fff;
+    border: 0.01rem solid #ffcb3f;
+    position: absolute;
+    top: 0.19rem;
+    left: 0.07rem;
+}
+.sss .un .sma{
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50%;
+    background: #fff;
+    border: 0.01rem solid #ffcb3f;
+    position: absolute;
+    bottom: 0.19rem;
+    right: 0.07rem;
+}
+.xxx{
+    margin-top: 0.7rem;
+    width: 100%;
+    height: 0.24rem;
+    float: left;
+}
+.xxx li{
+    width: 25%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 0.36rem;
+    font-size: 0.24rem;
+    color: #000;
+}
+
+
+.tji{
+    width: 100%;
+    height: 0.3rem;
+    float: left;
+    margin-top: 1.3rem;
+}
+.tji_w{
+    width: 7.5rem;
+    height: 0.3rem;
+    margin: 0 auto;
+    float: left;
+}
+.tji_w span{
+    border-left: 0.02rem solid #ffcb3f;
+    font-size: 0.3rem;
+    color: #000;
+    float: left;
+    margin-left: 0.2rem;
+    line-height: 0.3rem;
+}
+
+.tiren_w{
+    width: 7.5rem;
+    float: left;
+    overflow: hidden;
+    height: 100%;
+}
+
+.jiag{
+    width: 100%;
+    float: left;
+    border-top: 0.01rem solid #f2f2f2;
+    background-color:#fff;
+    height: 0.98rem;
+    position: fixed;
+    bottom:0;
+    left:0;
+}
+.jiag a:first-child{
+    width: 1.3rem;
+    display: block;
+    float: left;
+    font-size: 0.20rem;
+    color: #666;
+    text-align: center;
+}
+    .jiag a .iconfont{
+    font-size: 0.36rem;
+    width: 1.3rem;
+    color: #666;
+    float: left;
+    margin: 0.15rem 0;
+}
+.jiag a span{
+    width: 0.85rem;
+	font-size: 0.28rem;
+    line-height: 0.18rem;
+    margin-top: 0.01rem;
+	letter-spacing: 0.03rem;
+    color: #666666;
+}
+.jiag .ko{
+    width: 3rem;
+    height: 100%;
+    display: block;
+    text-align: center;
+    float: left;
+    line-height: 0.98rem;
+}
+.jiag button{
+    width: 3.09rem;
+	height: 0.98rem;
+	background-color: #ffcb3f;
+    border-radius: 4px;
+    font-size: 0.3rem;
+    color: #fff;
+    border: 0;
+    float: right;
+}
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>电子表</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    .box{
+        width:350px;
+        height:100px;
+        background:black;
+        position:absolute;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0; 
+        margin:auto;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        font-size:30px;
+        font-weight:bold;
+        color:#fff;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="time"></div>
+        <span>:</span>
+        <div class="time"></div>
+        <span>:</span>
+        <div class="time"></div>
+    </div>
+</body>
+<script>
+    // 获取页面元素
+    // 实例化Date对象
+    // 通过这个对象获取当前的时间
+    // 通过时间函数，每隔一秒重新获取一次当前的时间
+    // 将时间显示在页面中
+    let box=document.querySelectorAll(".box .time");
+    setInterval(()=>{  
+        let time=new Date();
+        let hour=time.getHours();
+        hour=hour<10?"0"+hour:hour;
+        let minute=time.getMinutes();
+        minute=minute<10?"0"+minute:minute;
+        let second=time.getSeconds();
+        second=second<10?"0"+second:second;
+        box[0].innerHTML=hour;
+        box[1].innerHTML=minute;
+        box[2].innerHTML=second;
+    },1000)
+</script>
+</html>

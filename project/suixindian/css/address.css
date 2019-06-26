@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header{
+    width: 100%;
+    height: 0.88rem;
+    background: linear-gradient(to right,#ff3432,#ff7919);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    line-height: 0.44rem;
+    z-index: 9;
+}
+.header .header_w{
+    width: 7rem;
+    margin: 0 auto;
+    position: relative;
+}
+.header .header_w .iconfont{
+    float: left;
+    color: #fff;
+    font-size: 0.4rem;
+    line-height: 0.88rem;
+}
+.title{
+    font-size: 0.34rem;
+    color: #fff;
+}
+.butt{
+    width: 1.74em;
+    height: 0.64rem;
+    position: absolute;
+    top: 0.12rem;
+    right: 0.14rem;
+    float: left;
+    background: #d66122;
+    border-radius: 0.87rem;
+}
+.butt .round{
+    width: 0.87rem;
+    height: 0.14rem;
+    line-height: 0.24rem;
+    margin: 0.22rem 0.25rem;
+}
+.butt .round .dian{
+    width: 0.08rem;
+    height: 0.08rem;
+    margin-top: 0.02rem;
+    background: #fff;
+    border-radius: 50%;
+    float: left;
+}
+.butt .round .dian:nth-child(2){
+    width: 0.12rem;
+    height: 0.12rem;
+    margin: 0 0.03rem;
+}
+.tw{
+    width: 0.87rem;
+    height: 0.37rem;
+    border-left: 0.05rem solid #d88958;
+    float: right;
+    position: absolute;
+    top: 0.12rem;
+    right: 0;
+}
+.tw .wai{
+    width: 0.14rem;
+    height: 0.14rem;
+    margin: 0.1rem 0.3rem 0.14rem 0.18rem;
+    border: 0.04rem solid #fff;
+    border-radius: 50%;
+    position: relative;
+}
+.tw .wai .small{
+    width: 0.05rem;
+    height: 0.05rem;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 0.05rem;
+    top: 0.05rem;
+}
+.mo{
+    width: 100%;
+    height: 0.65rem;
+    margin-top: 0.88rem;
+    float: left;
+}
+.mo .mo_w{
+    width: 7rem;
+    height: 100%;
+    margin: 0 auto;
+    line-height: 0.65rem;
+}
+.mo_w span{
+    width: 0.24rem;
+    margin-top: 0.2rem;
+    float: left;
+    height: 0.24rem;
+    border-radius: 50%;
+    float: left;
+    background: #fc7365;
+    border: 0.01rem solid #f9f9f9;
+}
+.mo_w h3{
+    font-size: 0.32rem;
+    float: left;
+    color: #ff4f40;
+    padding-left: 0.3rem;
+}
+.ico{
+    width: 0.94rem;
+    height: 0.32rem;
+    float: right;
+}
+.ico .iconfont{
+    width: 0.32rem;
+    height: 0.32rem;
+    float: left;
+    color: #fc7365;
+}
+.aa{
+    padding-left: 0.3rem;
+}
+.dizhi{
+    width: 100%;
+    height: 2.3rem;
+    float: left;
+    margin-top: 0.2rem;
+}
+.dizhi .dizhi_w{
+    width: 7rem;
+    height: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 2rem 0.1rem #ffebe9;
+}
+.km{
+    margin-top: 0.2rem;
+}
+.dizhi_w p{
+    font-size: 0.32rem;
+    padding-left: 0.35rem;
+    padding-top: 0.15rem;
+}
+.dizhi_w .ren{
+    font-size: 0.26rem;
+    color: #999999;
+    padding-top: 0.2rem;
+}
+.dizhi_w .tel{
+    font-size: 0.26rem;
+    color: #999999;
+    padding-top: 0.1rem;
+}
+.xin{
+    width: 100%;
+    height: 0.87rem;
+    float: left;
+    margin-top: 0.54rem;
+    line-height: 0.87rem;
+    text-align: center;
+}
+.xin .xin_w{
+    width: 3.59rem;
+    height: 0.87rem;
+    margin: 0 auto;
+    background: linear-gradient(to right,#ff3432,#ff7919);
+    font-size: 0.32rem;
+    border-radius: 1.75rem;
+    color: #fff;
+}

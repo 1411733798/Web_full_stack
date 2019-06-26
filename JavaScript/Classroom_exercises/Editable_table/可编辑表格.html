@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>可编辑表格</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<style>
+    .box {
+        width: 800px;
+        height: 600px;
+        margin: 100px auto;
+        text-align: center;
+        font-size: 20px;
+        color: #000000;
+    }
+    
+    input {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <table class="table table-bordered">
+            <tbody>
+                <thead>
+                    <tr class="success">
+                        <td>姓名</td>
+                        <td>性别</td>
+                        <td>年龄</td>
+                        <td>工作</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+            </tbody>
+            <tfoot>
+                <td class="info" colspan="5"><button type="button" class="btn btn-info">添加</button></td>
+            </tfoot>
+        </table>
+    </div>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        // 1、通过js模拟数据保存在localStorage中，通过各种方式去操作这个数据进行可编辑表格
+        // 2、查：通过localStorage.getItem()获取数据，进行展示
+        // 3、删：点击删除按钮对应的一行。所以每一行都需要有一个独特的标记，根据这个标记与数据进行比对，对比成功删除数据组对应的部分
+        // 4、改：点击对应要修改的内容确定要修改的哪一行，然后再与数据进行比对，去修改数据中的对应行
+        // 5、增：点击添加的按钮在页面插入新的一行，然后再添加完成数据之后在进行本地保存
+
+        // 或获取本地存储的数据，
+        // 通过字符串的拼接，将要显示的内容放在一个字符串中，再放入到父元素中
+
+        $(function() {
+            // 模拟数据，数据一般保存在数组中，方便进行循环遍历的操作
+            let Data = [{
+                    name: '小白菜',
+                    sex: '女',
+                    age: 12,
+                    work: '学生'
+                }, {
+                    name: '小来哥',
+                    sex: '男',
+                    age: 21,
+                    work: '学生'
+                }, {
+                    name: '小蕾蕾',
+                    sex: '女',
+                    age: 18,
+                    work: '学生'
+                }, {
+                    name: '小西瓜',
+                    sex: '男',
+                    age: 16,
+                    work: '学生'
+                }, {
+                    name: '小哈哈',
+                    sex: '女',
+                    age: 18,
+                    work: '学生'
+                }, ]
+                //将data保存在localStorage
+                // localStorage.setItem('person', JSON.stringify(Data));
+                //将localStorage中的数据拿出来进行渲染
+            let newData = JSON.parse(localStorage.getItem('person'));
+            //newData中的每一个数据都进行渲染，需要用到遍历
+            //jQuery中的遍历
+            //我们需要将tr,td这些标签拼接在一起，放到tbody中，使用字符串的拼接
+            let str = '';
+            $.each(newData, (index, value) => {
+                    //使用ES6的模板字符串，方便进行数据的拼接
+                    str += `
+                <tr class="warning" id='${index}'>
+                        <td><input type="text" value="${value.name}" name="name"></td>
+                        <td><input type="text" value="${value.sex}" name="sex"></td>
+                        <td><input type="yext" value="${value.age}" name="age"></td>
+                        <td><input type="text" value="${value.work}" name="work"></td>
+                        <td><button type="button" class="btn btn-danger">删除</button></td>
+                    </tr>
+                `
+                })
+                //将拼接好的str放到tbody中，显示信息
+                //使用append会重新加载再插入一条数据，可用html直接覆盖
+            $('tbody').html(str);
+            //删除：需要知道删除的是哪一行，需要在每一行上添加一个惟一的标识ID，每一条数据的对应的下标是唯一的，所以讲tr,td的属性值来区分每一行，使用数组中splice()方法删除newData中任意一个元素，删除后将newData重新存储在本地中，实现数据的更新。
+            //删除一条数据，根据每一行的唯一的ID标记来进行删除   
+            //给删除按钮添加点击事件
+            $('td>button').on('click', function() {
+                    //获取到标识的唯一的ID
+                    let id = $(this).parents('tr').attr('id');
+                    //点击后，根据ID查找newData对应的数据进行删除
+                    newData.splice(id, 1);
+                    //删除后将本地存储进行更新
+                    localStorage.setItem('person', JSON.stringify(newData));
+                    //将页面重新加载
+                    location.reload();
+                })
+                //修改：可以进行文本的输入，所以需要input 布局进行修改 
+                // 需要知道当前修改的是哪一条数据的哪一个属性，所以我们需要使用唯一的标识，合并标记属性的方法，在input身上有一个name属性可以帮助我们保存当前操作的是哪一个属性。
+                // 给input的父级元素table添加点击事件，但是监听input的点击，以此实现给多个元素添加同一个事件的效果（类似与原生js的事件委派）
+
+
+            $('table').on('click', 'input', function() {
+                // 将this转为jQuery对象并且添加失去焦点事件
+                $(this).on('blur', function() {
+                    // 在input失去焦点之后需要保存下来修改后的value值和当前修改的ID以及修改的属性的属性名
+                    let val = $(this).val();
+                    let key = $(this).attr('name');
+                    let id = $(this).parents('tr').attr('id');
+                    $.each(newData, (index, value) => {
+                        //通过newDate遍历找出正在遍历的那一条数据
+                        if (index == id) {
+                            value[key] = val;
+                        }
+                    })
+                    localStorage.setItem('person', JSON.stringify(newData));
+                    location.reload(true);
+
+                })
+
+            })
+
+
+
+
+        })
+    </script>
+</body>
+
+</html>

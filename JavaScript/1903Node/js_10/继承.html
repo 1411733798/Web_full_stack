@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=sc, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function inherit(Target, Origin) {
+            function F() {};
+            F.prototype = Origin.prototype; //把父对象的原型给了一个新的构造函数
+            Target.prototype = new F(); //把新的构造函数给了子对象的原型
+            Target.prototype.constuctor = Target; //子对象圆形的构造函数是子对象这个构造函数
+            Target.prototype.user = Origin.prototype; // 子对象的
+        }
+
+        function Father() {
+
+        }
+
+        function Son() {
+
+        }
+        inherit(Son, Fanther);
+        var son = new Son();
+        var father = new Father();
+    </script>
+</body>
+
+</html>

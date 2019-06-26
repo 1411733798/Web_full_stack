@@ -1,0 +1,115 @@
+.header{
+    width: 7.5rem;
+    height: 0.88rem;
+    background: #fff;
+    border-bottom: 0.01rem solid #F5F5F5;
+}
+#header{
+    width: 100%;
+    height: 0.88rem;
+    float: left;
+}
+.hea_w{
+    width: 7.5rem;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 0.88rem;
+}
+.hea_w .cuo .iconfont{
+    font-size: 0.36rem;
+    display: block;
+    color: #000000;
+    float: left;
+    padding: 0.29rem 0 0 0.24rem;
+    line-height: 0.44rem;
+}
+.hea_w .title{
+    width: 0.92rem;
+    height: 0.3rem;
+    font-size: 0.36rem;
+    letter-spacing: 0.11rem;
+    font-family: 'GillSansMT-ExtraCondensedBold';
+}
+.hea_w .title span{
+    color: #ffcb3f;
+}
+.hea_w .set{
+    width: 0.36rem;
+    height: 0.08rem;
+    float: right;
+    margin-right: 0.23rem;
+    display: block;
+    padding-top: 0.4rem;
+}
+.hea_w .set .itm{
+    width: 0.08rem;
+    height: 0.08rem;
+    float: left;
+    background: #000000;
+    border-radius: 50%;
+}
+.hea_w .set .itm:nth-child(2){
+    margin:0 0.06rem;
+}
+.sz{
+    width: 7.5rem;
+    height: 0.78rem;
+    background-color:#fff;
+    padding: 0 0.24rem;
+    box-sizing: border-box; 
+    border-bottom: 0.01rem solid #F5F5F5;
+}
+.sz i{
+    line-height: 0.78rem;
+    float: left;
+    color: #000;
+}
+.sz p{
+    line-height: 0.78rem;
+    font-size: 0.28rem;
+    float:right;
+    margin-right: 3.35rem;
+}
+.se{
+    width: 7rem;
+    height: 6.52rem;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 0.1rem;
+    border: 0.02rem solid #EBEBEB;
+    border-top: none;
+}
+.se .se1{
+    width:6.4rem;
+    height: 0.88rem;
+    background: #fff;
+    border-bottom: 0.01rem solid #F5F5F5;
+    margin: 0 auto;
+    padding-top: 0.3rem;
+    box-sizing: border-box;
+}
+.se .se1 p{
+    float: left;
+    font-size: 0.26rem;
+}
+.se .se1 i{
+    float: right;
+    font-size: 0.26rem;
+    margin-top: 0.05rem;
+}
+.button{
+    width: 6.38rem;
+    height: 0.77rem;
+    background: #FFF;
+    position: absolute;
+    bottom: 0.4rem;
+    left: 0.56rem;
+    border: 0.01rem solid #F4F4F4;
+}
+.button p{
+    line-height: 0.77rem;
+    color: #E1184C;
+    font-size: 0.28rem;
+    text-align: center;
+}

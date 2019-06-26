@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //工厂函数
+        function person(name, age, says) {
+            let obj = {};
+            obj.name = name;
+            obj.age = age;
+            obj.say = function() {
+                alert(says);
+            }
+            return obj;
+        }
+        let newObj = person('陈伟霆', 18, "迷人，性感");
+        console.log(newObj);
+        newObj.say();
+    </script>
+    <script>
+        //构造函数和混合函数
+        function Transport(obj) {
+            this.name = obj.name;
+            this.price = obj.price;
+            this.color = obj.color;
+            this.lang = obj.lang;
+            this.high = obj.high;
+            this.model = obj.model;
+            this.run = obj.run;
+        }
+        Transport.prototype.tyreNum = 4;
+        let sObj = {
+            name: "劳斯莱斯幻影",
+            price: "￥1200万",
+            color: "#000",
+            lang: "4m",
+            high: "1.2m",
+            model: "uek_1",
+            run: function() {
+                console.log("爷的品味你永远不懂!");
+            }
+        }
+        let car = new Transport(sObj);
+    </script>
+    <script>
+        function Animal() {
+            this.eat = function(food) {
+                alert(food);
+            }
+        }
+
+        function Gorilla(name) {
+            this.name = name;
+        }
+        Gorilla.prototype = new Animal();
+        //给父类Anmail的实例作为子对象的原型，实现继承
+        let gorilla = new Gorilla();
+        gorilla.eat('香蕉');
+    </script>
+</body>
+
+</html>

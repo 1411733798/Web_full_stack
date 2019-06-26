@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //工厂函数
+        function person(name, age, sex, says) {
+            let obj = {};
+            obj.name = name;
+            obj.age = age;
+            obj.sex = sex;
+            obj.say = function() {
+                alert(says);
+            }
+            return obj;
+        }
+        let a = person('王国栋', 24, "男", '是我们的老师');
+        console.log(a);
+        // a.say();
+    </script>
+
+    <script>
+        //构造函数
+        function Cat(obj) {
+            this.name = obj.name;
+            this.age = obj.age;
+            this.weight = obj.weight;
+        }
+        Cat.prototype.eat = "鱼";//用原型储存共享的属性和方法
+        let sCat = {
+            name: "加菲",
+            age: 2,
+            weight: '胖'
+        }
+        let c = new Cat(sCat);
+        console.log(c);
+        console.log(c.eat);
+    </script>
+</body>
+
+</html>

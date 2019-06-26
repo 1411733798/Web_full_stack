@@ -1,0 +1,233 @@
+body{
+    background-color:#FBFBFB;
+}
+/* 头部 */
+#header{
+    width: 100%;
+    height: 0.88rem;
+    float: left;
+    border-bottom:0.01rem solid #EDEDED;
+    box-sizing:border-box;
+    background-color:#FFFFFF;
+    position:fixed;
+    top:0;
+    left:0;
+}
+.hea_w{
+    width: 7.5rem;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 0.44rem;
+}
+.hea_w .cuo .iconfont{
+    font-size: 0.36rem;
+    display: block;
+    color: #000000;
+    float: left;
+    padding: 0.29rem 0 0 0.24rem;
+}
+.hea_w .title{
+    width: 0.92rem;
+    height: 0.3rem;
+    line-height:0.88rem;
+    font-size: 0.36rem;
+    letter-spacing: 0.11rem;
+    font-family: 'GillSansMT-ExtraCondensedBold';
+}
+.hea_w .title span{
+    color: #ffcb3f;
+}
+.hea_w .set{
+    width: 0.36rem;
+    height: 0.08rem;
+    float: right;
+    margin-right: 0.23rem;
+    display: block;
+    padding-top: 0.4rem;
+}
+.hea_w .set .itm{
+    width: 0.08rem;
+    height: 0.08rem;
+    float: left;
+    background: #000000;
+    border-radius: 50%;
+}
+.hea_w .set .itm:nth-child(2){
+    margin:0 0.06rem;
+}
+
+/* 标题 */
+.titleBox{
+    width:7.5rem;
+    height:0.88rem;
+    padding:0 0.24rem;
+    border-bottom:0.01rem solid #EDEDED;
+    background-color:#FFFFFF;
+    box-sizing:border-box;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.title .zuo{
+    display:block;
+    width:0.5rem;
+}
+.titleBox .iconzuo{
+    font-size:0.34rem;
+    color:#000;
+}
+.titleBox p{
+    font-size:0.28rem;
+    color:#000;
+}
+.titleBox .kong{
+    width:0.5rem;
+}
+.bigBox{
+    width:7.02rem;
+    height:3.35rem;
+    border:0.01rem solid #EDEDED;
+    border-top:0;
+    border-radius:0.1rem;
+    background-color:#fff;
+    margin:0 auto;
+    background-image:url("../img/paysucess01.png");
+    background-size:3.85rem 2.25rem;
+    background-repeat:no-repeat;
+    background-position:1.58rem 0.06rem;
+    overflow:hidden;
+}
+.bigBox .over{
+    width:100%;
+    font-size:0.28rem;
+    font-weight:bold;
+    color:#000;
+    text-align:center;
+    margin-top:0.7rem;
+}
+.bigBox .eng{
+    width:100%;
+    font-size:0.18rem;
+    color:rgba(0, 0, 0, 0.7);
+    text-align:center;
+}
+.bigBox .price{
+    width:100%;
+    font-size:0.24rem;
+    color:#000;
+    text-align:center;
+    margin-top:0.7rem;
+}
+.bigBox .box1{
+    width:4.76rem;
+    height:0.49rem;
+    margin:0.3rem auto 0;
+    display:flex;
+    justify-content:space-between;
+}
+.bigBox .box1 .btn{
+    width:1.45rem;
+    height:0.49rem;
+    border-radius:0.04rem;
+    border:0;
+    outline:0;
+    background-color:#FECA43;
+    font-size:0.24rem;
+    color:#fff;
+}
+.tui{
+    width:7.02rem;
+    height:1rem;
+    display:flex;
+    align-items:center;
+    margin:0 auto;
+}
+.tui .se{
+    width:0.03rem;
+    height:0.21rem;
+    background-color:#FECA43;
+    margin-right:0.1rem;
+}
+.tui .jian{
+    font-size:0.3rem;
+    color:#000;
+}
+
+
+/* 推荐商品 */
+.goods{
+    width:6.76rem;
+    height:auto;
+    margin:0 auto; 
+}
+
+ul{
+    width:6.76rem;
+    height:10.6rem;
+    display:flex;  
+    justify-content:space-between;
+    flex-wrap: wrap;
+    align-items:space-between;
+}
+ul .box{
+    width:3.24rem;
+    height:5.08rem;
+    background:#fff;
+}
+ul .box .top{
+    width:100%;
+    height:3.06rem;
+}
+ul .box .top img{
+    width:100%;
+    height:100%;
+}
+ul .box .center{
+    width:100%;
+    height:auto;
+    margin-top:0.18rem;
+    padding-left:0.22rem;
+    box-sizing:border-box;
+}
+ul .box .center .one{
+    width:0.32rem;
+    height:0.03rem;
+    background:#000;
+    margin-bottom:0.1rem;
+    
+}
+ul .box .center .logo{
+    font-size:0.14rem;
+}
+ul .box .center .two{
+    font-size:0.24rem;
+}
+
+ul .box .bottom{
+    width:100%;
+    height:0.94rem;
+    padding:0 0.18rem 0 0.22rem;
+    box-sizing:border-box;
+    line-height:0.94rem;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+ul .box .bottom a{
+    display:block;
+    width:1.53rem;
+    height:0.44rem;
+    background:#FFCB3F;
+    border-radius: 0.04rem;
+    line-height:0.44rem;
+    color:#fff;  
+    text-align: center;
+}
+ul .box .bottom  i{
+    font-size:0.12rem;
+}
+ul .box .bottom .mai{
+    font-size:0.12rem;
+    font-weight:bold;   
+}

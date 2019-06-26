@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var s = new Set();
+    [2, 3, 3, 5, 4, 5].map(x => {
+            s.add(x);
+            console.log(s);
+        })
+        //在Set()函数中可以传入一个数组类型的参数。
+    var set = new Set([3, 5, 1, 1, 4]);
+    console.log([...set]); // [3,5,1,4]
+    console.log(set.size); // 4
+</script>
+
+</html>

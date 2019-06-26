@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        html body {
+            background: #f0f0f0;
+        }
+        
+        .box {
+            width: 400px;
+            height: 400px;
+            background: #fff;
+            box-shadow: 0, 0, 40px, 20px, #fff;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 20px;
+            padding: 60px 0 0 40px;
+            box-sizing: border-box;
+        }
+        
+        .name,
+        .password {
+            width: 240px;
+            height: 40px;
+            border: 1px solid #b0b0b0;
+            margin-bottom: 50px;
+        }
+        
+        .click {
+            width: 200px;
+            height: 60px;
+            background: rgba(0, 255, 100, 0.4);
+            border-radius: 30px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 60px;
+            margin-left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <form action="">
+            <span>姓名：</span>
+            <input type="text" class="name">
+            <br>
+            <span>密码：</span>
+            <input type="password" class="password">
+        </form>
+        <div class="click">
+            登录 </div>
+    </div>
+    <script>
+        let click = document.getElementsByClassName("click");
+        click[0].onclick = function() {
+            location.href = 'back.html';
+        }
+    </script>
+</body>
+
+</html>

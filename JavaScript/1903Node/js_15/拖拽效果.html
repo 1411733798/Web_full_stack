@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: peachpuff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
+<script>
+    window.onload = function() {
+        //获取盒子
+        let box = document.querySelector(".box");
+        box.style.position = "fixed";
+        let lefts, tops;
+        let endX, endY; //鼠标移动结束时的位置
+        let startX, startY; //鼠标按下时的位置
+        box.onmousedown = function(e) { //鼠标按下时的事件
+            lefts = box.offsetLeft; //记录元素距离他最近的具有定位属性的元素水平距离
+            tops = box.offsetTop; //记录元素距离他最近的具有定位属性的元素垂直距离
+            startX = e.clientX; //鼠标按下时的位置
+            startY = e.clientY; //鼠标按下时的位置
+            window.addEventListener("mousemove", move, false); //添加事件监听执行鼠标移动事件
+            window.addEventListener('mouseup', up, false);
+        }
+
+        function up() {
+            window.removeEventListener("mousemove", move, false); //鼠标抬起时移除事件监听
+            window.removeEventListener("mouseup", up, false); //移除鼠标抬起是的事件
+        }
+
+        //将鼠标移动事件用函数封装
+        function move(event) {
+            endX = event.clientX; //鼠标停止移动结束时的位置
+            endY = event.clientY;
+            let newL = endX - startX + lefts; //元素可以移动的水平距离
+            let newT = endY - startY + tops; //元素可以移动的垂直距离
+            if (newL >= window.innerWidth - box.offsetWidth) { //移动的距离最大不能超过浏览器的内宽减去元素的实际宽度
+                newL = window.innerWidth - box.offsetWidth;
+            }
+            if (newL < 0) {
+                newL = 0;
+            }
+            if (newT >= window.innerHeight - box.offsetWidth) { //移动的距离最大不能超过浏览器的内高减去元素的实际高度
+                newT = window.innerHeight - box.offsetWidth;
+            }
+            if (newT < 0) {
+                newT = 0;
+            }
+            box.style.left = newL + "px";
+            box.style.top = newT + "px";
+        }
+    }
+</script>
+<!-- //鼠标按下时，要在移动鼠标的过程中盒子也跟着移动，通过获得鼠标的位置来判断盒子的定位值 //1.获取盒子，2.鼠标按下时要记录元素距离父元素的位置， //元素的定位值等于鼠标移动的距离（鼠标按下式的位置-鼠标停止移动的位置）+元素原来的left值 -->

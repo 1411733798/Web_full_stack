@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header{
+    width: 100%;
+    height: 0.88rem;
+    background: linear-gradient(to right,#ff3432,#ff7919);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    line-height: 0.44rem;
+    z-index: 9;
+}
+.header .header_w{
+    width: 7rem;
+    margin: 0 auto;
+    position: relative;
+}
+.title{
+    font-size: 0.34rem;
+    color: #fff;
+}
+.butt{
+    width: 1.74em;
+    height: 0.64rem;
+    position: absolute;
+    top: 0.12rem;
+    right: 0.14rem;
+    float: left;
+    background: #d66122;
+    border-radius: 0.87rem;
+}
+.butt .round{
+    width: 0.87rem;
+    height: 0.14rem;
+    line-height: 0.24rem;
+    margin: 0.22rem 0.25rem;
+}
+.butt .round .dian{
+    width: 0.08rem;
+    height: 0.08rem;
+    margin-top: 0.02rem;
+    background: #fff;
+    border-radius: 50%;
+    float: left;
+}
+.butt .round .dian:nth-child(2){
+    width: 0.12rem;
+    height: 0.12rem;
+    margin: 0 0.03rem;
+}
+.tw{
+    width: 0.87rem;
+    height: 0.37rem;
+    border-left: 0.05rem solid #d88958;
+    float: right;
+    position: absolute;
+    top: 0.12rem;
+    right: 0;
+}
+.tw .wai{
+    width: 0.14rem;
+    height: 0.14rem;
+    margin: 0.1rem 0.3rem 0.14rem 0.18rem;
+    border: 0.04rem solid #fff;
+    border-radius: 50%;
+    position: relative;
+}
+.tw .wai .small{
+    width: 0.05rem;
+    height: 0.05rem;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 0.05rem;
+    top: 0.05rem;
+}
+/* content */
+.nav{
+    width: 100%;
+    height: 0.88rem;
+    float: left;
+    margin-top: 0.88rem;
+}
+.nav .ul{
+    width: 7rem;
+    margin: 0 auto;
+    line-height: 0.88rem;
+    text-align: center;
+}
+a{
+    color: #989898;
+    text-decoration: none;    
+}
+.nav .ul li{
+    width: 14%;
+    height: 0.88rem;
+    font-size: 0.28rem;
+    color: #989898;
+    display: block;
+    float: left;
+    position: relative;
+}
+.nav .ul li span{
+    width: 0.38rem;
+    height: 0.06rem;
+    background: #ff4c45;
+    float: left;
+    position: absolute;
+    left: 0.3rem;
+    bottom: 0.12rem;
+    border-radius: 0.01rem;
+}
+.content{
+    width: 100%;
+    height: 2.3rem;
+    float: left;
+    margin-top: 0.3rem;
+
+}
+.content .content_w{
+    width: 7rem;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 0.1rem;
+    overflow: hidden;
+    box-shadow: 0 0 2rem 0.1rem #fde3d9;
+    position: relative;
+}
+.content_w .pic{
+    width: 100%;
+    height: 1.94rem;
+    margin-top: 0.15rem;
+}
+.content_w .pic .pic_l{
+    width: 3.14rem;
+    float: left;
+    height: 100%;
+}
+.content_w .pic .pic_l a img{
+    width: 3.14rem;
+    height: 1.94rem;
+    display: block;
+}
+.content_w .pic .pic_r{
+    width: 3.5rem;
+    height: 100%;
+    float: right;
+}
+.content_w .pic .pic_r h5{
+    font-size: 0.28rem;
+    padding-top: 0.28rem;
+    color: #333;
+}
+.content_w .pic .pic_r .wei{
+    font-size: 0.2rem;
+    color: #999999;
+}
+.price{
+    width: 0.94rem;
+    height: 0.3rem;
+    margin-top: 0.25rem;
+    line-height: 0.3rem;
+}
+.price .num{
+    float: left;
+    font-size: 0.3rem;
+    color: #ff4c45;
+}
+.price .lim{
+    float: left;
+    color: #ff4c45;
+    font-size: 0.18rem;    
+}
+.pic .pic_r .today{
+    padding-top: 0.2rem;
+    font-size: 0.2rem;
+    color: #989898;
+}
+.jia{
+    width: 1.16rem;
+    height: 0.38rem;
+    position: absolute;
+    bottom: 0.21rem;
+    line-height: 0.38rem;
+    text-align: center;
+    right: 0.13rem;
+}
+.jia .itm{
+    width: 33.3%;
+    height: 100%;
+    font-size: 0.24rem;
+    float: left;
+    border-radius: 50%;
+    color: #ff4c45;
+    box-shadow: 0 0 2rem 0.1rem #ebbdab;
+
+}
+.jia .itm:nth-child(2){
+    box-shadow: 0 0 2rem 0.1rem #fff;
+
+}
+
+.jiaa{
+    width: 0.6rem;
+    height: 0.6rem;
+    position: absolute;
+    box-shadow: 0 0 2rem 0.1rem #ebbdab;
+    border-radius: 50%;
+    bottom: 0.21rem;
+    right: 0.14rem;
+}
+.jiaa a .iconfont{
+    color: #ff4c45;
+    float: left;
+    display: block;
+    width: 0.4rem;
+    margin: 0.1rem 0.1rem;
+    height: 0.36rem;
+}
+
+.footer{
+    width: 100%;
+    height: 0.98rem;
+    float: left;
+    position: fixed;
+    z-index: 9;
+    bottom: 0;
+    background: #fff;
+}
+.footer .footer_w{
+    width: 7rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.footer_w .item a{
+    width: 0.98rem;
+    height: 0.98rem;
+    display: block;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer_w .item{
+    width: 0.97rem;
+    height: 0.97rem;
+    float: left;
+    position: relative;
+}
+
+.footer_w .item .iconfont{
+    font-size: 0.4rem;
+    color: #989898;
+}
+.footer_w .item span{
+    font-size: 0.16rem;
+    color: #989898;
+} 
+.footer_w .item a .er{
+    position: absolute;
+    top: 0.05rem;
+    right: 0.1rem;
+    width: 0.3rem;
+    height: 0.3rem;
+    background: #999999;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 0.3rem;
+}

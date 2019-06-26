@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header{
+    width: 100%;
+    height: 0.88rem;
+    background: linear-gradient(to right,#ff3432,#ff7919);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    line-height: 0.44rem;
+    z-index: 9;
+}
+.header .header_w{
+    width: 7rem;
+    margin: 0 auto;
+    position: relative;
+}
+.header .header_w .iconfont{
+    float: left;
+    color: #fff;
+    font-size: 0.4rem;
+    line-height: 0.88rem;
+}
+.title{
+    font-size: 0.34rem;
+    color: #fff;
+}
+.butt{
+    width: 1.74em;
+    height: 0.64rem;
+    position: absolute;
+    top: 0.12rem;
+    right: 0.14rem;
+    float: left;
+    background: #d66122;
+    border-radius: 0.87rem;
+}
+.butt .round{
+    width: 0.87rem;
+    height: 0.14rem;
+    line-height: 0.24rem;
+    margin: 0.22rem 0.25rem;
+}
+.butt .round .dian{
+    width: 0.08rem;
+    height: 0.08rem;
+    margin-top: 0.02rem;
+    background: #fff;
+    border-radius: 50%;
+    float: left;
+}
+.butt .round .dian:nth-child(2){
+    width: 0.12rem;
+    height: 0.12rem;
+    margin: 0 0.03rem;
+}
+.tw{
+    width: 0.87rem;
+    height: 0.37rem;
+    border-left: 0.05rem solid #d88958;
+    float: right;
+    position: absolute;
+    top: 0.12rem;
+    right: 0;
+}
+.tw .wai{
+    width: 0.14rem;
+    height: 0.14rem;
+    margin: 0.1rem 0.3rem 0.14rem 0.18rem;
+    border: 0.04rem solid #fff;
+    border-radius: 50%;
+    position: relative;
+}
+.tw .wai .small{
+    width: 0.05rem;
+    height: 0.05rem;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 0.05rem;
+    top: 0.05rem;
+}
+.vx{
+    width: 100%;
+    height: 1.5rem;
+    margin-top: 1rem;
+    float: left;
+}
+.vx .vx_w{
+    width: 7rem;
+    height: 100%;
+    box-shadow: 0 0 1rem 0.1rem #fde3d9;
+    margin: 0 auto;
+    position: relative;
+    position: relative;
+}
+.vx_w .iconfont{
+    width: 0.96rem;
+    height: 0.78rem;
+    font-size: 0.78rem;
+    color: #00c800;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.32rem;
+
+}
+.vx_w span{
+    font-size: 0.3rem;
+    color: #999999;
+    padding-top: 0.65rem;
+    float: left;
+    margin-left: 1.65rem;
+}
+.vx_w .yuan{
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    right: 0.28rem;
+    top: 0.55rem;
+    background: #ff5726;
+    border-radius: 50%;
+    border: 0.1rem solid #e2ccc3;
+    float: right;
+}
+.xx{
+    margin-top: 0.2rem;
+}
+.sure{
+    width: 100%;
+    height: 0.85rem;
+    margin-top: 1.1rem;
+    float: left;
+}
+.sure_w{
+    width: 7rem;
+    height: 100%;
+    text-align: center;
+    line-height: 0.85rem;
+    float: left;
+    margin: 0 auto;
+}
+.sure_w a{
+    width: 3.7rem;
+    height: 0.85rem;
+    float: left;
+    display: block;
+    text-decoration: none;
+    background: linear-gradient(to right,#ff3432,#ff7919);
+    color: #fff;
+    font-size: 0.36rem;  
+    border-radius: 0.42rem;  
+    margin-left: 1.65rem;
+}

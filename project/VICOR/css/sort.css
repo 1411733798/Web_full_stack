@@ -1,0 +1,252 @@
+*{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+body{background:#fcfcfc;}
+
+/*底部*/
+.footer{
+    width:7.5rem;
+    height:0.98rem;
+    padding:0 0.24rem;
+    border-top:0.01rem solid #C2C2C2;
+    background:#FAFAFA;
+    box-sizing: border-box;
+    position: fixed;
+    bottom:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+}
+.footer .box{
+    height:0.98rem;
+    width:1.3rem;
+}
+.footer .box a{
+    display:block;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    
+}
+.footer .box i{
+    font-size:0.4rem;
+    color:#040404;  
+}
+.footer .box .text{
+    font-size:0.2rem;
+    color:#040404; 
+}
+
+/*头部*/
+#header{
+    width: 100%;
+    height: 0.88rem;
+    float: left;
+    position: fixed;
+    top:0;
+    left:0;
+    border-bottom:0.01rem solid #f2f2f2;
+    background: #fff;
+}
+.hea_w{
+    width: 7.5rem;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 0.44rem;
+}
+.hea_w .cuo .iconfont{
+    font-size: 0.36rem;
+    display: block;
+    color: #000000;
+    float: left;
+    padding: 0.29rem 0 0 0.24rem;
+}
+.hea_w .title{
+    width: 0.92rem;
+    height: 0.3rem;
+    line-height:0.88rem;
+    font-size: 0.36rem;
+    letter-spacing: 0.11rem;
+    font-family: 'GillSansMT-ExtraCondensedBold';
+}
+.hea_w .title span{
+    color: #ffcb3f;
+}
+.hea_w .set{
+    width: 0.36rem;
+    height: 0.08rem;
+    float: right;
+    margin-right: 0.23rem;
+    display: block;
+    padding-top: 0.4rem;
+}
+.hea_w .set .itm{
+    width: 0.08rem;
+    height: 0.08rem;
+    float: left;
+    background: #000000;
+    border-radius: 50%;
+}
+.hea_w .set .itm:nth-child(2){
+    margin:0 0.06rem;
+}
+
+/*搜索*/
+.search{
+    height:0.88rem;
+    width:7.5rem;
+    padding:0 0.34rem 0 0.34rem;
+    margin-top:0.88rem;
+    background: #fff;
+    box-sizing:border-box;
+    border-bottom:0.01rem solid #ffcb3f;
+    box-shadow:0 0.1rem 0.2rem 0.006rem rgba(0, 0, 0, 0.1);
+   /* overflow:hidden;*/
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position: relative;
+}
+.search .kuang{
+    height:0.6rem;
+    width:6.04rem;
+    border-radius:0.4rem;
+    border:0.01rem solid #ddd;
+    display:flex;
+    align-items:center;
+}
+.search .kuang .iconfont{
+    font-size:0.24rem;
+    color:#666;
+    margin-left:0.18rem;
+}
+.search .kuang .sear{
+    outline:none;
+    height:0.4rem;
+    width:3rem;
+    border:0;
+    text-indent: 1em;
+}
+.search .bu{
+    outline:none;
+    height:0.44rem;
+    width:0.5rem;
+    border:0;
+    background:#fff;
+    font-size:0.24rem;
+    color:#000;
+}
+/*中心部分*/
+.center{
+    width:7.5rem;
+    height:auto;
+    padding:0 0.24rem 0 0;
+    box-sizing:border-box;
+    display:flex;
+    justify-content: space-between;
+}
+
+/*左*/
+.center .left{
+    width:2rem;
+    height:7.48rem;
+    box-sizing: border-box;
+
+}
+.center .left .kuai{
+    width:2rem;
+    height:1.04rem;
+    background:#f7f7f7;
+    margin-bottom:0.02rem;
+    font-size:0.26rem;
+    text-align:center;
+    line-height:1.04rem;
+    color:#333;
+    
+}
+.center .left .k1{
+    width:2rem;
+    height:1.06rem;
+    background:white;
+    border-left:0.04rem solid #ffcb3f;
+    margin:0;
+    font-size:0.26rem;
+    text-align:center;
+    line-height:1.06rem;
+    color:#333;  
+}
+/*右*/
+.center .right{
+    width:5.04rem;
+  /*  height:9.50rem;*/
+    /*box-sizing: border-box;  */ 
+}
+.center .right .top{
+    width:5.04rem;
+    height:1.34rem;
+    box-sizing: border-box; 
+    margin-bottom:0.46rem;  
+}
+.center .right .top img{
+    width:5.04rem;
+}
+.center .right .cen{
+    width:5.04rem;
+    height:0.6rem;
+    box-sizing: border-box; 
+    margin-bottom:0.08rem;  
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.center .right .cen .c{
+    color:#010101;
+    font-size:0.32rem;
+}
+.center .right .cen .l{
+    width:0.84rem;
+    height:0.02rem;
+    margin-right:0.18rem;
+    background-color:#ffcb3f;
+}
+.center .right .cen .r{
+    width:0.84rem;
+    height:0.02rem;
+    margin-left:0.18rem;
+    background-color:#ffcb3f;
+}
+.center .bottom{
+    width:100%;
+    height:auto;
+    padding:0 0 0 0.08rem;
+    box-sizing: border-box;
+ 
+   /* display:flex;
+    justify-content: space-between;*/
+}
+.center .bottom .ti{
+    width:1.5rem;
+    height:2.34rem;
+
+    float:left;
+    margin-right:0.18rem;
+}
+.center .bottom .ti img{
+    display:block;
+    width:1.5rem;
+    height:1.42rem;
+}
+.center .bottom .ti p{
+    width:1.5rem;
+    height:0.92rem;
+    text-align: center;
+    line-height: 0.92rem;
+    font-size:0.22rem;
+    color:#000;
+}

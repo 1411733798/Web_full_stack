@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header{
+    width: 100%;
+    height: 0.88rem;
+    background: linear-gradient(to right,#ff3432,#ff7919);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    line-height: 0.44rem;
+}
+.header .header_w{
+    width: 7rem;
+    margin: 0 auto;
+    position: relative;
+}
+.header .header_w .iconfont{
+    float: left;
+    color: #fff;
+    font-size: 0.4rem;
+    line-height: 0.88rem;
+}
+.title{
+    font-size: 0.34rem;
+    color: #fff;
+}
+.butt{
+    width: 1.74em;
+    height: 0.64rem;
+    position: absolute;
+    top: 0.12rem;
+    right: 0.14rem;
+    float: left;
+    background: #d66122;
+    border-radius: 0.87rem;
+}
+.butt .round{
+    width: 0.87rem;
+    height: 0.14rem;
+    line-height: 0.24rem;
+    margin: 0.22rem 0.25rem;
+}
+.butt .round .dian{
+    width: 0.08rem;
+    height: 0.08rem;
+    margin-top: 0.02rem;
+    background: #fff;
+    border-radius: 50%;
+    float: left;
+}
+.butt .round .dian:nth-child(2){
+    width: 0.12rem;
+    height: 0.12rem;
+    margin: 0 0.03rem;
+}
+.tw{
+    width: 0.87rem;
+    height: 0.37rem;
+    border-left: 0.05rem solid #d88958;
+    float: right;
+    position: absolute;
+    top: 0.12rem;
+    right: 0;
+}
+.tw .wai{
+    width: 0.14rem;
+    height: 0.14rem;
+    margin: 0.1rem 0.3rem 0.14rem 0.18rem;
+    border: 0.04rem solid #fff;
+    border-radius: 50%;
+    position: relative;
+}
+.tw .wai .small{
+    width: 0.05rem;
+    height: 0.05rem;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 0.05rem;
+    top: 0.05rem;
+}
+
+.banner{
+    width: 100%;
+    height: 5.98rem;
+    float: left;
+    margin-top: 0.88rem;
+}
+.banner a img{
+    width: 100%;
+    height: 5.98rem;
+    display: block;
+}
+.zsh{
+    width: 100%;
+    height: 0.3rem;
+    margin-top: 0.35rem;
+    float: left;
+}
+.zsh .zsh_w{
+    width: 7rem;
+    height: 100%;
+    margin: 0 auto;
+    line-height: 0.3rem;
+}
+.zsh_w span{
+    color: #ff5625;
+    font-size: 0.3rem;
+    float: left;
+}
+.zsh_w .iconfont{
+    color: #ff5625;
+    font-size: 0.26rem;
+    float: left;
+    padding-left: 0.03rem;
+}
+.zsh_w .pic{
+    width: 1.2rem;
+    height: 0.44rem;
+    color: #ff5625;
+    float: right;
+    font-size: 0.24rem;
+}
+.ban{
+    width: 100%;
+    height: 1.22rem;
+    margin:0.3rem 0;
+    float: left;
+}
+.ban_w{
+    width: 7rem;
+    height: 100%;
+    margin: 0 auto;
+}
+.ban_w a p{
+    font-size: 0.34rem;
+    float: left;
+    display: block;
+}
+.ban_w .jis{
+    font-size: 0.26rem;
+    color: #7f7f7f;
+
+}
+.ping{
+    width: 100%;
+    height: 0.51rem;
+    float: left;
+}
+.ping_w{
+    width: 7rem;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 0.51rem;
+}
+.ping_w span{
+    width: 1.5rem;
+    height: 100%;
+    margin-left: 0.2rem;
+    float: left;
+    border: 0.01rem solid #f0b4a3;
+    box-shadow: 0 0 0.2rem 0.1rem #fef5f2;
+    border-radius: 0.25rem;
+    font-size: 0.28rem;
+    opacity: 0.3;
+    color: #ff5625;
+}
+.ping_w span:nth-child(1){
+    opacity: 1;
+}
+.pho{
+    width: 100%;
+    height: 1.89rem;
+    float: left;
+    margin-top: 0.3rem;
+}
+.pho_w{
+    width: 7rem;
+    height: 100%;
+    margin: 0 auto;
+}
+.pho_w .tu{
+    width: 1.19rem;
+    height: 1.19rem;
+    float: left;
+    background: #000000;
+    border-radius: 50%;
+}
+
+.pho_w .wen{
+    width: 5.51rem;
+    height: 100%;
+    float: right;
+}
+.pho_w .wen p{
+    font-size: 0.36rem;
+    color: #000000;
+    opacity: 0.8;
+}
+.pho_w .wen p:nth-child(3){
+    font-size: 0.24rem;
+    opacity: 0.3;
+    color: #000;
+}
+.pho_w .wen p:last-child{
+    font-size: 0.24rem;
+    opacity: 0.5;
+    color: #000;
+    padding-top: 0.26rem;
+}
+.pho_w .wen span{
+    float: right;
+    width: 1.74rem;
+    height: 0.3rem;
+    padding-top: 0.2rem;
+}
+.pho_w .wen span .iconfont{
+    font-size: 0.2rem;
+    color: #ff5625;
+    line-height: 0.3rem;
+    float: right;
+}
+.pho_w .wen span .iconfont:first-child{
+    color: #7f7f7f;
+}
+.mei{
+    width: 100%;
+    height: 1rem;
+    float: left;
+    margin-top: 0.2rem;
+}
+.mei .mei_w{
+    width: 7rem;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1rem;
+}
+.mei .mei_w img{
+    width: 0.63rem;
+    height: 0.63rem;
+    padding-top: 0.2rem;
+    float: left;
+}
+.mei .mei_w span{
+    font-size: 0.36rem;
+    float: left;
+    padding-left: 0.2rem;
+    color: #989898;
+}
+.xia{
+    width: 100%;
+    height: 4.36rem;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.xia_w{
+    width: 7rem;
+    height: 100%;
+    margin: 0 auto;
+}
+.xia_w .one{
+    width: 2.61rem;
+    height: 4.37rem;
+    float: left;
+    margin-left: 0.2rem;
+}
+.two{
+    float: right;
+    width: 1.62rem;
+    overflow: S;
+    height: 100%;
+    position: absolute;
+    right: -1.2rem;
+    top: 0;
+}
+.xia_w .one img{
+    width: 2.61rem;
+    height: 3.08rem;
+    float: left;
+}
+.xia_w .one h5{
+    padding-top: 3.22rem;
+    font-size: 0.3rem;
+    color: #989898;
+}
+.xia_w .one .sun{
+    height: 0.6rem;
+    width: 100%;
+    float: left;
+    line-height: 0.6rem;
+}
+.xia_w .one .sun span{
+    font-size: 0.32rem;
+    float: left;
+    color: #ff3931;
+}
+.sun .po{
+    width: 0.6rem;
+    height: 0.6rem;
+    float: right;
+    border-radius: 50%;
+    background: #fff;
+    line-height: 0.1rem;
+    color: #ff3931;
+    text-align: center;
+    box-shadow: 0 0 1rem 0.1rem #fde3d9;
+}
+.di{
+    width: 100%;
+    height: 0.98rem;
+    float: left;
+}
+.di_w{
+    width: 7rem;
+    height: 100%;
+    margin: 0 auto;
+}
+.di_w .left{
+    width: 4.2rem;
+    height: 100%;
+    float: left;
+}
+.di_w .left a{
+    display: block;
+    text-decoration: none;
+    width: 0.98rem;
+    height: 0.98rem;
+    float: left;
+    text-align: center;
+}
+.di_w .left .iconfont{
+    color: #ff5626;
+    float: left;
+    padding-left: 0.15rem;
+    font-size: 0.38rem;
+}
+.di_w .left p{
+    color: #ff5a24;
+    font-size: 0.32rem;
+    float: left;
+}
+.di_w .left a:last-child{
+    float: right;
+    background: #fef5f2;
+    box-shadow: 0 0 1rem 0.1rem #f1d5ca;
+    border-radius: 50%;
+    font-size: 0.45rem;
+    line-height: 0.98rem;
+}
+.di_w .lp{
+    width: 2.64rem;
+    height: 0.71rem;
+    float: right;
+    background: linear-gradient(to right,#ff3432,#ff7919);
+    border-radius: 0.36rem;
+    color: #fff;
+    font-size: 0.36rem;
+    text-align: center;
+    line-height: 0.71rem;
+}
+ 

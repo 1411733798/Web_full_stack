@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <script>
+        //隐式循环的原理
+        //封装一个jQuery对象
+        function jQuery(selector){    //selector 选择器
+            if(typeof selector === 'string'){
+                let ele=document.querySelectorAll(selector); // 获取元素
+                for(let i=0;i<ele.length;i++){   // 隐式循环
+                    this[i]=ele[i];
+                    console.log(i)            // 将元素放在JQuery对象上，方便调用每一个元素
+                }
+                this.length=ele.length;    // 设置jQuery对象的长度
+            }else if(typeof selector === 'function'){
+                return selector;  // 
+            }
+        }
+        // 在jq的原型上封装需要的方法
+        jQuery.prototype={
+            css:function(attr,value){
+                for(let i=0;i<this.length;i++){  // 将每一元素都设置样式
+                    this[i].style[attr]=value;
+                }
+                // 给方法返回一个返回值，返回之时jq对象本身，可以保证每次方法调用结束之后，结果都是jq对象,方便链式调用
+                return this;
+            },
+            html:function(text){
+                for(let i=0;i<this.length;i++){
+                    this[i].innerHTML=text;
+                }
+                return this;
+            }
+        }
+        
+        let a=new jQuery('.box');  
+        a.css("color","blue").html("456");
+        console.log(a);
+
+        
+        
+        
+        
+    </script>
+</body>
+</html>

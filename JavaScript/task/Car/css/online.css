@@ -1,0 +1,110 @@
+@import "public.css";
+
+/* 预约内容 */
+.big-content {
+    width: 1024px;
+    height: 388px;
+    padding-top: 20px;
+    margin: 0 auto 40px;
+}
+
+.big-content .bg-select {
+    width: 482px;
+    height: 388px;
+    padding: 0 5px;
+    margin: auto;
+}
+
+.big-content .bg-select .st-card {
+    padding-bottom: 10px;
+    width: 482px;
+    overflow: hidden;
+}
+
+.big-content .bg-select .st-card .text {
+    font-size: 14px;
+    color: #555555;
+    /* padding-bottom: 10px;
+    box-sizing: border-box; */
+    float: left;
+}
+
+.big-content .bg-select .st-card .text-box {
+    margin-left: 100px;
+    padding-left: 10px;
+    margin-top: 4px;
+    position: relative;
+}
+
+.big-content .bg-select .st-card .text-box .one {
+    margin-bottom: 3px;
+    height: 20px;
+    border: solid 1px #CCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    color: #555555;
+    border-radius: 4px;
+    outline:none;
+}
+
+.big-content .bg-select .st-card .text-box .two {
+    width: 64px;
+}
+
+.big-content .bg-select .st-card .text-box .three {
+    width: 291px;
+}
+
+.big-content .bg-select .st-card .text-box .push {
+    width: 16px;
+    height: 16px;
+}
+
+.big-content .bg-select .st-card .text-box .sex {
+    font-size: 14px;
+    color: #555555;
+    vertical-align: 3px;
+    margin: 0 6px;
+}
+
+.big-content .bg-select .st-card .text-box textarea {
+    margin-bottom: 3px;
+    height: 57px;
+    width: 291px;
+    border: solid 1px #CCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    color: #555555;
+    border-radius: 4px;
+    outline:none;
+}
+
+.big-content .bg-select .st-card .text-box img {
+    width: 115px;
+    height: 40px;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.big-content .bg-select .st-card .text-box .icon-xunhuan {
+    font-size: 24px;
+    position: absolute;
+    top: 6px;
+    left: 54px;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.big-content .bg-select button {
+    width: 98px;
+    height: 28px;
+    background: #333;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+.big-content .bg-select button:hover {
+    background: #ff6600;
+    border: 1px solid #333;
+}

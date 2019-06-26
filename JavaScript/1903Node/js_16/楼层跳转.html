@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .box {
+            width: 800px;
+            height: auto;
+            margin: 0 auto;
+        }
+        
+        .floors {
+            width: 100%;
+            height: 500px;
+            background: peachpuff;
+            margin-bottom: 50px;
+            text-align: center;
+            line-height: 500px;
+            color: #fff;
+            font-size: 100px;
+        }
+        
+        .btn {
+            width: 0;
+            height: 0;
+            position: fixed;
+            left: 50px;
+            bottom: 200px;
+            overflow: hidden;
+            transition: all .5s;
+        }
+        
+        .btns {
+            width: 100px;
+            height: 80px;
+            background: gold;
+            text-align: center;
+            line-height: 80px;
+            color: #fff;
+            font-size: #fff;
+        }
+        
+        .btns:nth-child(2n-1) {
+            background: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="floors">1</div>
+        <div class="floors">2</div>
+        <div class="floors">3</div>
+        <div class="floors">4</div>
+        <div class="floors">5</div>
+    </div>
+    <div class="btn">
+        <div class="btns">1</div>
+        <div class="btns">2</div>
+        <div class="btns">3</div>
+        <div class="btns">4</div>
+        <div class="btns">5</div>
+    </div>
+</body>
+
+</html>
+<script>
+    window.onload = function() {
+        let scrollH; //获取鼠标滚动的距离
+        let btn = document.querySelector('.btn'); //获得点击的按钮的大盒子
+        let btns = document.querySelectorAll(".btns"); //获得
+        let floor = document.querySelectorAll(".floors");
+        let t = null;
+        window.onscroll = function() {
+            scrollH = document.documentElement.scrollTop; //html文档在滚动时距离浏览器顶部的距离,滚动了多少距离
+            if (scrollH >= 200) {
+                btn.style.height = "400px";
+                btn.style.width = "100px";
+            } else {
+                btn.style.height = " 0";
+                btn.style.width = "0";
+            }
+        }
+        let arr = []; //获取每个楼层距离浏览器顶部的距离将它放在一个数组中，通过数组下标来访问他，
+        floor.forEach(v => {
+            arr.push(v.offsetTop);
+        })
+        window.onwheel = function() { //用户操作鼠标滚轮时，清除时间函数
+            clearInterval(t);
+        }
+        btns.forEach((v, i) => { //给每一个按钮添加
+            console.log(v);
+            v.onclick = function() {
+                clearInterval(t); //在内次点击的时候清除原来的时间函数，防止它发生冲突
+                t = setInterval(() => {
+                    let speed = (arr[i] - scrollH) / 10;
+                    //每次移动的速度=每次要移动的距离/时间,每次移动的距离=目标位置-当前位置
+                    speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed); //对每次的值取整，以便他的判断  正数向上取整，负数向下取整，
+                    scrollH += speed; //每次移动多少距离
+                    window.scrollTo(0, scrollH); //滚动到目标位置
+                    if (scrollH == arr[i]) { // 判断当抵达目标位置后，清除滚动效果
+                        clearInterval(t);
+                    }
+                }, 20)
+            }
+        });
+    }
+</script>
